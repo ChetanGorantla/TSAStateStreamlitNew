@@ -1,48 +1,34 @@
 import streamlit as st
 import pandas as pd
+med_data = pd.read_csv("medications.csv")
 
-# Define the file name for the medication data
-MEDICATION_FILE = "medications.csv"
-
-# Load the medication data from the CSV file
-@st.cache
-def load_data():
-    data = pd.read_csv(MEDICATION_FILE)
-    return data
-
-# Add a new medication to the CSV file
-def add_medication(name, dose, frequency):
-    new_row = {'name': name, 'dose': dose, 'frequency': frequency}
-    with open(MEDICATION_FILE, mode='a', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=new_row.keys())
-        writer.writerow(new_row)
-
-# Define the search function
-def search_data(search_term, data):
-    if search_term:
-        filtered_data = data[data['name'].str.contains(search_term, case=False)]
-    else:
-        filtered_data = data
+def filter_data(search_term):
+    filtered_data = med_data[med_data['name'].str.contains(search_term, case=False)]
     return filtered_data
-st.set_page_config(page_title="Medication Management", page_icon=":pill:")
-
-medication_data = load_data()
-
-st.title("Medication Management")
-st.subheader("Add a New Medication")
-name = st.text_input("Name")
-dose = st.text_input("Dose")
-frequency = st.text_input("Frequency")
-if st.button("Add Medication"):
-    add_medication(name, dose, frequency)
-    st.success("Medication added!")
-    # Update the medication data
-    medication_data = load_data()
-st.subheader("Search Medications")
-search_term = st.text_input("Enter a medication name to search")
-filtered_data = search_data(search_term, medication_data)
-st.write("Here are your search results:")
-if not filtered_data.empty:
-    st.write(filtered_data[['name', 'dose', 'frequency']])
-else:
-    st.write("No medications found.")
+# Define a function to add a new medication to the medication data CSV file
+def add_medication(name, dose, frequency):
+    new_med = {'name': name, 'dose': dose, 'frequency': frequency}
+    med_data = med_data.append(new_med, ignore_index=True)
+    med_data.to_csv("medications.csv", index=False)
+    return med_data
+def app():
+    # Set the app title and icon
+    st.set_page_config(page_title="Medication Tracker", page_icon=":pill:")
+    # Set the app header
+    st.title("Medication Tracker")
+    # Add a search bar to filter the medication data by name
+    search_term = st.text_input("Search for a medication:")
+    filtered_data = filter_data(search_term)
+    # Display the filtered medication data
+    if not filtered_data.empty:
+        st.write(filtered_data[['name', 'dose', 'frequency']])
+    else:
+        st.write("No matching medications found.")
+    #add a new medication to the CSV file
+    st.header("Add a new medication")
+    name = st.text_input("Medication name:")
+    dose = st.text_input("Medication dose:")
+    frequency = st.text_input("Medication frequency:")
+    if st.button("Add medication"):
+        add_medication(name, dose, frequency)
+        st.success("Medication added!")

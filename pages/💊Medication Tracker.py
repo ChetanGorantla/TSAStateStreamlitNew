@@ -5,15 +5,15 @@ st.set_page_config(page_title="Medication Tracker", page_icon=":pill:")
 med_data = pd.read_csv("medications.csv")
 my_meds = []
 search_term = st.sidebar.text_input("Search for a medication:")
-filtered_data = med_data[med_data['name'].str.contains(search_term, case=False)]
-st.write(filtered_data[['name', 'dose', 'frequency']])
+filtered_data = med_data[med_data['medication_name'].str.contains(search_term, case=False)]
+st.write(filtered_data[['medication_name', 'dose', 'frequency']])
 
 st.write("Add a new medication:")
 name = st.text_input("Medication name:")
 dose = st.text_input("Dose:")
 frequency = st.text_input("Frequency:")
 if st.button("Add"):
-    med_data = med_data.append({'name': name, 'dose': dose, 'frequency': frequency}, ignore_index=True)
+    med_data = med_data.append({'medication_name': name, 'dose': dose, 'frequency': frequency}, ignore_index=True)
     med_data.to_csv("medications.csv", index=False)
     my_meds.append(name)
 

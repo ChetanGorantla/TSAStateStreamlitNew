@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import datetime
 
+# Set the page configuration
+st.set_page_config(page_title="Medication Management", page_icon=":pill:")
+
 # Define a function to load the medication data
 def load_data():
     data = pd.read_csv("medications.csv")
@@ -52,7 +55,7 @@ def main():
         data = pd.concat([data, new_data], ignore_index=True)
         data.to_csv("medications.csv", index=False)
         st.success("Medication added to the list.")
+        
 
-
-if name == "main":
+if __name__ == "__main__":
     main()

@@ -1,61 +1,48 @@
 import streamlit as st
 import pandas as pd
-import datetime
 
-# Set the page configuration
-st.set_page_config(page_title="Medication Management", page_icon=":pill:")
+# Define the file name for the medication data
+MEDICATION_FILE = "medications.csv"
 
-# Define a function to load the medication data
+# Load the medication data from the CSV file
+@st.cache
 def load_data():
-    data = pd.read_csv("medications.csv")
-    data["start_date"] = pd.to_datetime(data["start_date"])
-    data["end_date"] = pd.to_datetime(data["end_date"])
+    data = pd.read_csv(MEDICATION_FILE)
     return data
 
-# Define a function to get the medications due for refill
-def get_refill_medication(data):
-    today = datetime.datetime.today().date()
-    return data.loc[data["end_date"].dt.date <= today]
+# Add a new medication to the CSV file
+def add_medication(name, dose, frequency):
+    new_row = {'name': name, 'dose': dose, 'frequency': frequency}
+    with open(MEDICATION_FILE, mode='a', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=new_row.keys())
+        writer.writerow(new_row)
 
-# Define the main function
-def main():
-    st.title("Medication Management")
-
-    # Load the medication data
-    data = load_data()
-
-    # Display the medication data
-    st.subheader("Medication List")
-    search_term = st.text_input("Search Medications")
+# Define the search function
+def search_data(search_term, data):
     if search_term:
-        filtered_data = data[data["medication_name"].str.contains(search_term, case=False)]
-        if filtered_data.empty:
-            st.write("No medications found.")
-        else:
-            st.write(filtered_data)
+        filtered_data = data[data['name'].str.contains(search_term, case=False)]
     else:
-        st.write(data)
+        filtered_data = data
+    return filtered_data
+st.set_page_config(page_title="Medication Management", page_icon=":pill:")
 
-    # Display the medications due for refill
-    st.subheader("Medications Due for Refill")
-    refill_medication = get_refill_medication(data)
-    st.write(refill_medication)
+medication_data = load_data()
 
-    # Allow the user to add a new medication
-    st.subheader("Add New Medication")
-    medication_name = st.text_input("Medication Name")
-    start_date = st.date_input("Start Date", datetime.date.today())
-    end_date = st.date_input("End Date", datetime.date.today())
-    if st.button("Add Medication"):
-        new_data = pd.DataFrame({
-            "medication_name": [medication_name],
-            "start_date": [start_date],
-            "end_date": [end_date]
-        })
-        data = pd.concat([data, new_data], ignore_index=True)
-        data.to_csv("medications.csv", index=False)
-        st.success("Medication added to the list.")
-        
-
-if __name__ == "__main__":
-    main()
+st.title("Medication Management")
+st.subheader("Add a New Medication")
+name = st.text_input("Name")
+dose = st.text_input("Dose")
+frequency = st.text_input("Frequency")
+if st.button("Add Medication"):
+    add_medication(name, dose, frequency)
+    st.success("Medication added!")
+    # Update the medication data
+    medication_data = load_data()
+st.subheader("Search Medications")
+search_term = st.text_input("Enter a medication name to search")
+filtered_data = search_data(search_term, medication_data)
+st.write("Here are your search results:")
+if not filtered_data.empty:
+    st.write(filtered_data[['name', 'dose', 'frequency']])
+else:
+    st.write("No medications found.")

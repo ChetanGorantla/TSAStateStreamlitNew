@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 st.set_page_config(page_title="Find Nearby Hospitals", page_icon="🏥")
+
 def get_user_location():
     ip_url = "https://api.ipify.org"
     location_url = "http://ip-api.com/json"

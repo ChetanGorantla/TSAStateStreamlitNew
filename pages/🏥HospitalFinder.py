@@ -30,7 +30,7 @@ def find_hospitals(max_radius):
         st.write(f"{name} ({rating}) - {address}")
 def main():
     st.title("Find Nearby Hospitals")
-    max_radius = st.slider("Select max radius (in miles):", min_value=1, max_value=50, value=5)
+    max_radius = st.slider("Select max distance from you (in miles):", min_value=1, max_value=50, value=5)
     st.write(f"Searching for hospitals within {max_radius} miles...")
     find_hospitals(max_radius)
 if __name__ == "__main__":

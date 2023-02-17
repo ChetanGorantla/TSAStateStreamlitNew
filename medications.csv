@@ -1,0 +1,11 @@
+medication_name,start_date,end_date
+Insulin,2022-01-01,2022-12-31
+Glipizide,2022-02-01,2022-08-01
+Pioglitazone,2022-03-15,2022-09-15
+Sitagliptin,2022-01-15,2022-07-15
+Empagliflozin,2022-02-15,2022-08-15
+Dapagliflozin,2022-03-01,2022-09-01
+Gliclazide,2022-01-01,2022-12-31
+Metformin and Canagliflozin,2022-02-01,2022-08-01
+Metformin and Saxagliptin,2022-03-15,2022-09-15
+Liraglutide,2022-01-15,2022-07-15

@@ -23,12 +23,36 @@ def main():
 
     # Display the medication data
     st.subheader("Medication List")
-    st.write(data)
+    search_term = st.text_input("Search Medications")
+    if search_term:
+        filtered_data = data[data["medication_name"].str.contains(search_term, case=False)]
+        if filtered_data.empty:
+            st.write("No medications found.")
+        else:
+            st.write(filtered_data)
+    else:
+        st.write(data)
 
     # Display the medications due for refill
     st.subheader("Medications Due for Refill")
     refill_medication = get_refill_medication(data)
     st.write(refill_medication)
+
+    # Allow the user to add a new medication
+    st.subheader("Add New Medication")
+    medication_name = st.text_input("Medication Name")
+    start_date = st.date_input("Start Date", datetime.date.today())
+    end_date = st.date_input("End Date", datetime.date.today())
+    if st.button("Add Medication"):
+        new_data = pd.DataFrame({
+            "medication_name": [medication_name],
+            "start_date": [start_date],
+            "end_date": [end_date]
+        })
+        data = pd.concat([data, new_data], ignore_index=True)
+        data.to_csv("medications.csv", index=False)
+        st.success("Medication added to the list.")
+
 
 if name == "main":
     main()

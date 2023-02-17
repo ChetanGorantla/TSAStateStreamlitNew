@@ -4,6 +4,17 @@ st.set_page_config(page_title="The Doctor", page_icon="🏠")
 st.markdown("# The Doctor")
 SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 
+st.markdown(
+    f'''
+        <style>
+            .sidebar .sidebar-content {{
+                width: 375px;
+            }}
+        </style>
+    ''',
+    unsafe_allow_html=True
+)
+
 st.image("logo.png")
 st.write(
     "Welcome! The Doctor is a univeral medical diagnostic tool with a range of functionality."

@@ -35,3 +35,13 @@ def main():
     find_hospitals(max_radius)
 if __name__ == "__main__":
     main()
+    
+streamlit_style = """
+			<style>
+			@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+			html, body, [class*="css"]  {
+			font-family: 'Raleway', sans-serif;
+			}
+			</style>
+			"""
+st.markdown(streamlit_style, unsafe_allow_html=True)

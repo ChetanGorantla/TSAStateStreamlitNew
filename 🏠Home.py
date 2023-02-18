@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="The Doctor", page_icon="🏠")
+st.set_page_config(page_title="KGK Diagnosis", page_icon="🏠")
 st.markdown("# The Doctor")
 SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 

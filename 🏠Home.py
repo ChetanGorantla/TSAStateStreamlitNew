@@ -4,7 +4,7 @@ st.set_page_config(page_title="KGK Diagnosis", page_icon="🏠")
 st.markdown("KGK Diagnosis")
 SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 
-st.image("newLogo.png")
+st.image("Screenshot 2023-02-17 235252.png")
 st.write(
     "Welcome! The Doctor is a univeral medical diagnostic tool with a range of functionality."
 )

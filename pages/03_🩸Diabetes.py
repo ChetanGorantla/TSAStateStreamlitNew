@@ -38,11 +38,8 @@ alopecia = col2.checkbox(
 )
 obesity = col2.checkbox("Are you obese?")
 
-@st.cache_data
-link = "diabetes/diabetes.joblib"
-def load_data(lnk):
-	return joblib.load("diabetes/diabetes.joblib")
-rf = load_data(link)
+rf = joblib.load("diabetes/diabetes.joblib")
+
 
 input_arr = [
     age,
@@ -88,7 +85,12 @@ for i in range(1, len(input_arr)):
 
 for i in range(len(symptoms)):
     pkl_file = open("diabetes/encodings/diabetes_" + symptoms[i] + ".pkl", "rb")
-    lbl = pickle.load(pkl_file)
+    
+    @st.cache_data
+    def load_pickle(file):
+	return pickle.load(file)
+    lbl = load_pickle(pkl_file)
+	
     pkl_file.close()
     # if symptoms[i] == "Age":
     # st.write(lbl.get_params())

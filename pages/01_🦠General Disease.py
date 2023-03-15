@@ -15,7 +15,10 @@ st.set_page_config(page_title="General Disease Predictor", page_icon="🦠")
 filename = "gendisease/gendisease.sav"
 
 @st.cache_data
-model = pickle.load(open(filename, "rb"))
+def load_data(link):
+	model = pickle.load(open(link, "rb"))
+
+load_data(filename)
 
 symptoms = [
     "itching",

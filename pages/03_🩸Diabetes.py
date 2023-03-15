@@ -38,6 +38,7 @@ alopecia = col2.checkbox(
 )
 obesity = col2.checkbox("Are you obese?")
 
+@st.cache_resource
 rf = joblib.load("diabetes/diabetes.joblib")
 input_arr = [
     age,

@@ -13,6 +13,7 @@ import pickle
 
 st.set_page_config(page_title="General Disease Predictor", page_icon="🦠")
 filename = "gendisease/gendisease.sav"
+model = None
 
 @st.cache_data
 def load_data(link):

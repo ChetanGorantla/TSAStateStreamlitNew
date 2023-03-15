@@ -39,7 +39,11 @@ alopecia = col2.checkbox(
 obesity = col2.checkbox("Are you obese?")
 
 @st.cache_data
-rf = joblib.load("diabetes/diabetes.joblib")
+link = "diabetes/diabetes.joblib"
+def load_data(lnk):
+	return joblib.load("diabetes/diabetes.joblib")
+rf = load_data(link)
+
 input_arr = [
     age,
     polyuria,

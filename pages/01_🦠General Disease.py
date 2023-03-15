@@ -151,12 +151,13 @@ symptoms = [
     "red_sore_around_nose",
     "yellow_crust_ooze",
 ]
+
 lnk = "gendisease/disease_input.csv"
-data = None
+
 @st.cache_data
 def getData(link):
-	data = pd.read_csv(link).dropna(axis=1)
-getData(lnk)
+	return pd.read_csv(link).dropna(axis=1)
+data = getData(lnk)
 
 encoder = LabelEncoder()
 # dropping all the uncessary prognosis - ones that are quite obvious

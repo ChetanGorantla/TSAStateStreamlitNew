@@ -13,13 +13,9 @@ import pickle
 
 st.set_page_config(page_title="General Disease Predictor", page_icon="🦠")
 filename = "gendisease/gendisease.sav"
-model = None
 
-@st.cache_data
-def load_data(link):
-	model = pickle.load(open(link, "rb"))
+model = pickle.load(open(filename, "rb"))
 
-load_data(filename)
 
 symptoms = [
     "itching",
@@ -156,7 +152,12 @@ symptoms = [
     "yellow_crust_ooze",
 ]
 Data = "gendisease/disease_input.csv"
-data = pd.read_csv(Data).dropna(axis=1)
+df = None
+@st.cache_data
+def getData(link):
+	df = pd.read_csv(link).dropna(axis=1)
+getData(Data)
+
 encoder = LabelEncoder()
 # dropping all the uncessary prognosis - ones that are quite obvious
 data = data[data.prognosis != "Drug Reaction"]

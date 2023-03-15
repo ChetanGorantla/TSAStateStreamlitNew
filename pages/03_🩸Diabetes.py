@@ -88,7 +88,7 @@ for i in range(len(symptoms)):
     
     @st.cache_data
     def load_pickle(file):
-	return pickle.load(file)
+        return pickle.load(file)
     lbl = load_pickle(pkl_file)
 	
     pkl_file.close()

@@ -14,7 +14,7 @@ import pickle
 st.set_page_config(page_title="General Disease Predictor", page_icon="🦠")
 filename = "gendisease/gendisease.sav"
 
-@st.cache_resource
+@st.cache_data
 model = pickle.load(open(filename, "rb"))
 
 symptoms = [

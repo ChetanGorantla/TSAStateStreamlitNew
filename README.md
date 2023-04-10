@@ -1,2 +1,2 @@
 Streamlit Link:
-https://chetangorantla-tsaregionals23-home-69npwn.streamlit.app/
+https://kgkdiagnostics.streamlit.app/

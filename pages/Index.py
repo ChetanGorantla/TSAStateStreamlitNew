@@ -1,6 +1,6 @@
 import streamlit as st
 
-col1, col2, col3 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 with col1:
    st.header("A cat")
@@ -17,5 +17,7 @@ with col2:
 with col3:
    st.header("An owl")
    st.image("https://static.streamlit.io/examples/owl.jpg")
+   st.header("Doggies are very nice to play with because they aaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+   st.image("https://static.streamlit.io/examples/dog.jpg")
 
 

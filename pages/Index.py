@@ -5,7 +5,8 @@ col1, col2, col3 = st.columns(3)
 with col1:
    st.header("A cat")
    st.image("https://static.streamlit.io/examples/cat.jpg")
-   st.header("Doggies are very\n nice to play with because they aaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+   st.header("GERD")
+   st.text("GERD is an aghahgoaehgljahgouiaeghaegijahnoegiag")
    st.image("https://static.streamlit.io/examples/dog.jpg")
 
 with col2:

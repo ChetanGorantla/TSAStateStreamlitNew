@@ -5,8 +5,8 @@ col1, col2, col3 = st.columns(3)
 with col1:
    st.header("A cat")
    st.image("https://static.streamlit.io/examples/cat.jpg")
-   st.header("GERD")
-   st.text("GERD is an aghahgoaehgljahgouiaeghaegijahnoegiag")
+   st.header("Fungal Infection")
+   st.text("Itching, soreness, redness or rash in the affected area. Discolored, thick or cracked nails. Pain while eating, loss of taste or white patches in mouth or throat. A painless lump under your skin.")
    st.image("https://static.streamlit.io/examples/dog.jpg")
 
 with col2:

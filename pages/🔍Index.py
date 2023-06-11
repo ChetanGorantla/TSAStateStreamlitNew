@@ -15,51 +15,54 @@ with col1:
    st.header("Gerd")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Chronic cholestasis")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Drug Reaction")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Peptic Ulcer Disease")
+   st.image("https://static.streamlit.io/examples/cat.jpg")
+   
+   st.header("Typhoid")
    st.image("https://static.streamlit.io/examples/cat.jpg")
 
 with col2:
-   st.header("A dog")
+   st.header("AIDS")
    st.image("https://static.streamlit.io/examples/dog.jpg")
    
-   st.header("Allergy")
+   st.header("Diabetes")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("Gerd")
+   st.header("Gastroenteritis")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Bronchial Asthma")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Hypertension")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Migraine")
    st.image("https://static.streamlit.io/examples/cat.jpg")
 
 with col3:
-   st.header("An owl")
+   st.header("Cervical Spondylosis")
    st.image("https://static.streamlit.io/examples/owl.jpg")
    
-   st.header("Allergy")
+   st.header("Paralysis")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("Gerd")
+   st.header("Jaundice")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Malaria")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Chicken Pox")
    st.image("https://static.streamlit.io/examples/cat.jpg")
    
-   st.header("A cat")
+   st.header("Dengue")
    st.image("https://static.streamlit.io/examples/cat.jpg")
 
 

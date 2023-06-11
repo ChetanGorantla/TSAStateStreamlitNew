@@ -7,46 +7,43 @@ with col1:
    st.text("Symptoms include itching, soreness, redness or rash in the affected area. Discolored, thick or cracked nails. Pain while eating, loss of taste or white patches in mouth or throat. A painless lump under your skin.")
    st.text("A Fungal Infection is a fungus that invades the tissue which can cause a disease that's confined to the skin, spreads into tissue, bones, and organs, or affects the whole body.")
    st.text("To avoid attracting a Fungal Infection, keep your skin clean and dry, particularly the folds of your skin. Maintain good hygeine.")
-   #Source - Dr. Lucille K. Georg/ Centers for Disease Control and Prevention (CDC)
    st.image("https://images.emedicinehealth.com/images/slideshow/ringworm_s5.jpg")
    
    st.header("Allergy")
    st.text("Symptoms include itchy, watery eyes, nose. Sneezing. Runny nose. Rashes.")
    st.text("Allergies occur when your immune system reacts to a foreign substance.")
    st.text("To avoid your allergies, you must void your allergens. Take your medicines as prescribed.")
-   #Source - FortWorthENT.net
    st.image("https://fortworthent.net/wp-content/uploads/2017/04/skin-allergy-contact-dermatitis.jpg")
    
    st.header("Gerd")
    st.text("Symptoms include burning pain in the chest that usually occurs after eating and worsens when lying down.")
    st.text("This is a chronic disease that occurs when stomach acid or bile flows into the food pipe and irritates the lining.")
    st.text("To avoid this, maintain a healthy weight. Stop smoking. Eat food thoroughly.")
-   #Source - laintegrativegi.net
    st.image("https://www.laintegrativegi.com/wp-content/uploads/2020/03/gerd.jpg")
    
    st.header("Chronic cholestasis")
    st.text("Symptoms include yellowing of your skin and the white of your eyes, dark urine, light-colored stool.")
    st.text("Chronic cholestatic diseases, whether occurring in infancy, childhood or adulthood, are characterized by defective bile acid transport from the liver to the intestine.")
    st.text("To avoid this, practice smoking and alcohol cessation, gentle weight bearing exercise regimen, and oral vitamin D and calcium supplements")
-   st.image("https://static.streamlit.io/examples/cat.jpg")
+   st.image("https://www.hindustantimes.com/ht-img/img/2023/04/23/550x309/fatty_liver_1682251728812_1682251734845.jpg")
    
    st.header("Drug Reaction")
    st.text("Symptoms include hives, itching, skin rash, and swelling of the lips, tongue, or face.")
    st.text("A drug reaction is a skin condition—such as an itchy or tender bump, rash, or blister—that develops when the body reacts adversely to medication.")
    st.text("To avoid this, know why you are taking each medication. Know how to take the drug. Fill all your prescriptions at the same pharmacy.")
-   st.image("https://static.streamlit.io/examples/cat.jpg")
+   st.image("https://pharmaxchange.info/wp-content/uploads/2011/04/skin-rash.jpg")
    
    st.header("Peptic Ulcer Disease")
    st.text("Symptoms include burning stomach pain. Feeling of fullness, bloating or belching. Intolerance to fatty foods.")
    st.text("A sore that develops on the lining of the esophagus, stomach, or small intestine. Ulcers occur when stomach acid damages the lining of the digestive tract.")
    st.text("To reduce risk of Peptic Ulcer Disease, avoid tobacco products. Avoid alcohol. Use caution with aspirin and/or NSAIDs.")
-   st.image("https://static.streamlit.io/examples/cat.jpg")
+   st.image("https://medlineplus.gov/images/PepticUlcer_share.jpg")
    
    st.header("Typhoid")
    st.text("Some common symptoms of typhoid include high fever, stomach pain, headache, and loss of appetite.")
    st.text("Typhoid fever is a bacterial infection caused by Salmonella typhi and is characterized by a prolonged and high fever along with gastrointestinal symptoms.")
    st.text("Some ways to prevent typhoid include practicing good hygiene, especially washing hands before eating or preparing food, and consuming safe and clean water and food")
-   st.image("https://static.streamlit.io/examples/cat.jpg")
+   st.image("https://images.onlymyhealth.com/imported/images/2022/January/14_Jan_2022/t_Large.jpg")
 
 with col2:
    st.header("AIDS")

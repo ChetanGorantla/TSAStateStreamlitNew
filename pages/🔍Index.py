@@ -7,7 +7,8 @@ with col1:
    st.text("Symptoms include itching, soreness, redness or rash in the affected area. Discolored, thick or cracked nails. Pain while eating, loss of taste or white patches in mouth or throat. A painless lump under your skin.")
    st.text("A Fungal Infection is a fungus that invades the tissue which can cause a disease that's confined to the skin, spreads into tissue, bones, and organs, or affects the whole body.")
    st.text("To avoid attracting a Fungal Infection, keep your skin clean and dry, particularly the folds of your skin. Maintain good hygeine.")
-   st.image("https://static.streamlit.io/examples/dog.jpg")
+   #Source - Dr. Lucille K. Georg/ Centers for Disease Control and Prevention (CDC)
+   st.image("https://images.emedicinehealth.com/images/slideshow/ringworm_s5.jpg")
    
    st.header("Allergy")
    st.text("Symptoms include itchy, watery eyes, nose. Sneezing. Runny nose. Rashes.")

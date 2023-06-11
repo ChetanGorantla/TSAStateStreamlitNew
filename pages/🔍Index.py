@@ -14,13 +14,15 @@ with col1:
    st.text("Symptoms include itchy, watery eyes, nose. Sneezing. Runny nose. Rashes.")
    st.text("Allergies occur when your immune system reacts to a foreign substance.")
    st.text("To avoid your allergies, you must void your allergens. Take your medicines as prescribed.")
-   st.image("https://static.streamlit.io/examples/cat.jpg")
+   #Source - FortWorthENT.net
+   st.image("https://fortworthent.net/wp-content/uploads/2017/04/skin-allergy-contact-dermatitis.jpg")
    
    st.header("Gerd")
    st.text("Symptoms include burning pain in the chest that usually occurs after eating and worsens when lying down.")
    st.text("This is a chronic disease that occurs when stomach acid or bile flows into the food pipe and irritates the lining.")
    st.text("To avoid this, maintain a healthy weight. Stop smoking. Eat food thoroughly.")
-   st.image("https://static.streamlit.io/examples/cat.jpg")
+   #Source - laintegrativegi.net
+   st.image("https://www.laintegrativegi.com/wp-content/uploads/2020/03/gerd.jpg")
    
    st.header("Chronic cholestasis")
    st.text("Symptoms include yellowing of your skin and the white of your eyes, dark urine, light-colored stool.")

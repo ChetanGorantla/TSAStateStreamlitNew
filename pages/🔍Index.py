@@ -12,9 +12,9 @@ with col1:
    
    
    st.header("Allergy")
+   st.write("Allergies occur when your immune system reacts to a foreign substance.")
    st.image("https://fortworthent.net/wp-content/uploads/2017/04/skin-allergy-contact-dermatitis.jpg")
    st.write("Symptoms include itchy, watery eyes, nose. Sneezing. Runny nose. Rashes.")
-   st.write("Allergies occur when your immune system reacts to a foreign substance.")
    st.write("To avoid your allergies, you must void your allergens. Take your medicines as prescribed.")
    
    

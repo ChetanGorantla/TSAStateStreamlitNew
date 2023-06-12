@@ -87,7 +87,7 @@ with col3:
    st.text("Some common symptoms of cervical spondylosis include neck pain, stiffness, and numbness or weakness in the arms or hands.")
    st.text("Cervical spondylosis is a degenerative condition that affects the joints and discs in the neck, leading to pain and other associated symptoms.")
    st.text("Some ways to prevent cervical spondylosis include maintaining good posture, especially while sitting or working for long periods, engaging in regular exercise that includes neck stretches and strengthening exercises, and avoiding activities that strain the neck.")
-   st.image("https://physiopretoria.co.za/corpus/content/media/2017/09/Increased-Cervical-Lordosis_blue-Incorrect-Neck-position-poking-chin-posture-strain-on-Thoracic-spine.jpg")
+   st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5SY-MK2l4z7B6NFVvZC8CdNMws0SVAhznuIPbytJEU7zJtfgQR8tPlSjCMGn6HGai0JX1A6f1w7U&usqp=CAU&ec=48600113")
    
    st.header("Paralysis")
    st.text("Some common symptoms of paralysis caused by brain hemorrhage include a loss of movement, sensation, or function in certain parts of the body, depending on the area of the brain affected.")

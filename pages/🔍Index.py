@@ -4,9 +4,10 @@ col1, col2, col3 = st.columns(3, gap = "large")
 #source - Mayo Clinic, ChatGPT
 with col1:
    st.header("Fungal Infection")
+   st.write("A Fungal Infection is a fungus that invades the tissue which can cause a disease that's confined to the skin, spreads into tissue, bones, and organs, or affects the whole body.")
    st.image("https://images.emedicinehealth.com/images/slideshow/ringworm_s5.jpg")
    st.write("Symptoms include itching, soreness, redness or rash in the affected area. Discolored, thick or cracked nails. Pain while eating, loss of taste or white patches in mouth or throat. A painless lump under your skin.")
-   st.write("A Fungal Infection is a fungus that invades the tissue which can cause a disease that's confined to the skin, spreads into tissue, bones, and organs, or affects the whole body.")
+   
    st.write("To avoid attracting a Fungal Infection, keep your skin clean and dry, particularly the folds of your skin. Maintain good hygeine.")
    
    

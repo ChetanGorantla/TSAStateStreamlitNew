@@ -1,6 +1,6 @@
 import streamlit as st
 
-col1, col2, col3 = st.columns([4,4,4])
+col1, col2, col3 = st.columns(3, gap = "large")
 #source - Mayo Clinic, ChatGPT
 with col1:
    st.header("Fungal Infection")

@@ -4,16 +4,18 @@ col1, col2, col3 = st.columns(3, gap = "large")
 #source - Mayo Clinic, ChatGPT
 with col1:
    st.header("Fungal Infection")
+   st.image("https://images.emedicinehealth.com/images/slideshow/ringworm_s5.jpg")
    st.write("Symptoms include itching, soreness, redness or rash in the affected area. Discolored, thick or cracked nails. Pain while eating, loss of taste or white patches in mouth or throat. A painless lump under your skin.")
    st.write("A Fungal Infection is a fungus that invades the tissue which can cause a disease that's confined to the skin, spreads into tissue, bones, and organs, or affects the whole body.")
    st.write("To avoid attracting a Fungal Infection, keep your skin clean and dry, particularly the folds of your skin. Maintain good hygeine.")
-   st.image("https://images.emedicinehealth.com/images/slideshow/ringworm_s5.jpg")
+   
    
    st.header("Allergy")
+   st.image("https://fortworthent.net/wp-content/uploads/2017/04/skin-allergy-contact-dermatitis.jpg")
    st.write("Symptoms include itchy, watery eyes, nose. Sneezing. Runny nose. Rashes.")
    st.write("Allergies occur when your immune system reacts to a foreign substance.")
    st.write("To avoid your allergies, you must void your allergens. Take your medicines as prescribed.")
-   st.image("https://fortworthent.net/wp-content/uploads/2017/04/skin-allergy-contact-dermatitis.jpg")
+   
    
    st.header("Gerd")
    st.write("Symptoms include burning pain in the chest that usually occurs after eating and worsens when lying down.")

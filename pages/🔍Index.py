@@ -79,11 +79,7 @@ with col1:
    st.write("Symptoms are Bright red bleeding.")
    st.write("This can be prevented by avoiding long periods of sitting, eat high fiber foods, and eat lots of vegetables and fruits.")
    
-   st.header("Myocardial infarction.")
-   st.write("A sudden blockage of blood flow to the heart.")
-   st.image("https://img.medscape.com/thumbnail_library/dt_201109_myocardial_infarction_800x450.jpg")
-   st.write("Symptoms are Chest pain, shortness of breath, sweating, nausea, arm/jaw pain.")
-   st.write("This can be prevented by Healthy lifestyle, regular exercise, balanced diet, no smoking.")
+   
 
 with col2:
    st.header("AIDS")
@@ -248,5 +244,11 @@ with col3:
    st.image("https://www.dhs.wisconsin.gov/sites/default/files/styles/large/public/dam/image/5/impetigo-ecthyma-skin-infection.jpg?itok=ROLXhLUC")
    st.write("Some symptoms are red sores, yellow-brown crust, itching, rash")
    st.write("Some ways to prevent impetigo are maintaining good personal hygiene, avoiding close contact with infected individuals, keeping wounds clean and covered")
+   
+   st.header("Myocardial Infarction")
+   st.write("A sudden blockage of blood flow to the heart.")
+   st.image("https://img.medscape.com/thumbnail_library/dt_201109_myocardial_infarction_800x450.jpg")
+   st.write("Symptoms are Chest pain, shortness of breath, sweating, nausea, arm/jaw pain.")
+   st.write("This can be prevented by Healthy lifestyle, regular exercise, balanced diet, no smoking.")
 
  

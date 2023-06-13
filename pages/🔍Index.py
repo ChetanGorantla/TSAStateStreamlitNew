@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Index", page_icon="🔍")
 st.error("This page contains graphic content which may not be suitable for all users.")
-st.warning("This page contains graphic content which may not be suitable for all users.")
+
 col1, col2, col3 = st.columns([8,8,8], gap = "large")
 #source - Mayo Clinic, ChatGPT
 

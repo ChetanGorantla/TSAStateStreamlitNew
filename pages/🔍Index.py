@@ -57,26 +57,31 @@ with col1:
    
    st.header("Tuberculosis")
    st.write("A bacterial disease caused by Mycobacterium tuberculosis that primarily affects the lungs.")
+   st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.everydayhealth.com%2Ftuberculosis%2Fguide%2Flatent%2F&psig=AOvVaw1RqsoBhI1tnoVe7T13e4W7&ust=1686771548502000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJi3lOn_wP8CFQAAAAAdAAAAABAE")
    st.write("The symptoms are Chills, fatigue, fever, pain in the chest region, night sweats, loss of muscle, etc.")
    st.write("This can be prevented by getting treated immediately, vaccination, washing hands after coughing or sneezing, etc.")
 
    st.header("Common Cold")
    st.write("A mild infection of the upper respiratory tract.")
+   st.image("https://medlineplus.gov/images/CommonCold_share.jpg")
    st.write("Symptoms are Runny nose, sneezing, congestion, headaches, etc.")
    st.write("This can be prevented by washing hands often, avoid contact with sick people, get about 8 hours of sleep a night")
 
    st.header("Pneumonia")
    st.write("An infection that targets one or both lungs.")
+   st.image("https://stories.cnnbrasil.com.br/wp-content/uploads/sites/9/2021/05/capa-pneumonia.png?w=640&h=853&crop=1")
    st.write("Cough, fever, chills, and breathing difficulties.")
    st.write("Good hygiene, avoiding smoking, engaging in regular exercise, maintaining a good diet.")
 
    st.header("Hemorrhoids")
    st.write("Swollen veins that appear from inside the rectum.")
+   st.image("https://www.chicagoveininstitute.com/wp-content/uploads/2021/02/what-hemorrhoids-look-like-illustration.jpg")
    st.write("Symptoms are Bright red bleeding.")
    st.write("This can be prevented by avoiding long periods of sitting, eat high fiber foods, and eat lots of vegetables and fruits.")
    
    st.header("Myocardial infarction.")
    st.write("A sudden blockage of blood flow to the heart.")
+   st.image("https://img.medscape.com/thumbnail_library/dt_201109_myocardial_infarction_800x450.jpg")
    st.write("Symptoms are Chest pain, shortness of breath, sweating, nausea, arm/jaw pain.")
    st.write("This can be prevented by Healthy lifestyle, regular exercise, balanced diet, no smoking.")
 
@@ -125,6 +130,7 @@ with col2:
    # Varicose Veins
    st.header("Varicose Veins")
    st.write("Enlarged and twisted veins, usually in the legs")
+   st.image("https://www.verywellhealth.com/thmb/JpUa-o5MEV9tAwQ4IHC00SZpwlY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1406151327-61135a225aa641fab30af797061f4737.jpg")
    st.write("Some symptoms are bulging veins, leg pain, swelling, heaviness, cramping")
    st.write("Ways to prevent varicose veins are regular exercise, maintaining a healthy weight, avoiding prolonged sitting or standing")
 
@@ -132,6 +138,7 @@ with col2:
    st.header("Hypo-")
    st.write("thyroidism")
    st.write("Underactive thyroid gland, resulting in low thyroid hormone levels")
+   st.image("https://assets.medpagetoday.net/media/images/99xxx/99599.jpg?width=0.6")
    st.write("Some symptoms are fatigue, weight gain, cold intolerance, dry skin, depression")
    st.write("No specific prevention, but early detection and treatment are important")
 
@@ -139,24 +146,28 @@ with col2:
    st.header("Hyper-")
    st.write("thyroidism")
    st.write("Overactive thyroid gland, leading to excessive thyroid hormone production")
+   st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjE8klHQXqMHBbwLe4lH0onUMTKclLa97GshVjmBW1pw&usqp=CAU&ec=48600113")
    st.write("Some symptoms are weight loss, rapid heartbeat, tremors, anxiety, heat intolerance")
    st.write("No specific prevention, but early detection and treatment are crucial")
 
    # Hypoglycemia
    st.header("Hypoglycemia")
    st.write("Low blood sugar levels")
+   st.image("https://images.ctfassets.net/yixw23k2v6vo/r6SRfDq2K7n3UwTSteTgM/f6c4ac7624fd1a61c587bd2c6af3d59c/GettyImages-1202528615.jpg")
    st.write("Some symptoms are shakiness, dizziness, sweating, confusion, hunger")
    st.write("Some ways to prevent hypoglycemia are balanced diet with regular meals, avoiding excessive sugar intake")
 
    # Osteoarthritis
    st.header("Osteoarthritis")
    st.write("Degenerative joint disease causing joint pain and stiffness")
+   st.image("https://www.verywellhealth.com/thmb/ltbVgUcdfa2GVxY4zvZVy1eI1P8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/two-x-ray-radiograph-views-of-male-44-year-old-knee-with-severe-degenerative-osteoarthritic-changes-123534572-599da7dad088c0001096df6c.jpg")
    st.write("Some symptoms are joint pain, stiffness, swelling, decreased range of motion")
    st.write("Some ways to prevent osteoarthritis are regular exercise, maintaining a healthy weight, protecting joints from injury")
 
    # Arthritis
    st.header("Arthritis")
    st.write("Inflammation of joints, causing pain and stiffness")
+   st.image("https://nextcare.com/wp-content/uploads/2022/09/Joint-Img-Web.jpg")
    st.write("Some symptoms are joint pain, swelling, stiffness, reduced mobility")
    st.write("Some ways to prevent arthritis are regular exercise, maintaining a healthy weight, avoiding joint injuries")
 
@@ -205,24 +216,28 @@ with col3:
    # Paroxysmal Positional Vertigo
    st.header("Paroxysmal Positional Vertigo (PPV)")
    st.write("Brief episodes of vertigo triggered by changes in head position")
+   st.image("https://external-preview.redd.it/MTITVvCWy58Kf6z6p-T9o8_3EbUY1o_WgI3F1Y_80Ng.jpg?auto=webp&s=d63c44771937e077279226a62cbad1f1ae6bcf14")
    st.write("Some symptoms are spinning sensation, dizziness, nausea, imbalance")
    st.write("No specific prevention, but avoiding sudden head movements can help manage symptoms")
 
    # Acne
    st.header("Acne")
    st.write("Skin condition characterized by pimples and inflammation")
+   st.image("https://my.clevelandclinic.org/-/scassets/images/org/health/articles/21737-cystic-acne-694069284")
    st.write("Some symptoms are pimples, blackheads, whiteheads, redness, oily skin")
    st.write("Some ways to prevent acne are proper skincare, regular cleansing, avoiding excessive oil-based products")
 
    # Urinary Tract Infection
    st.header("(UTI)")
    st.write("Infection in the urinary system, often caused by bacteria")
+   st.image("https://images.everydayhealth.com/images/urinary-tract-infection-guide-722x406.jpg")
    st.write("Some symptoms are frequent urination, burning sensation, cloudy urine, abdominal pain")
    st.write("Some ways to prevent urinary tract infection are staying hydrated, proper hygiene, urinating after sexual activity")
 
    # Psoriasis
    st.header("Psoriasis")
    st.write("Chronic autoimmune disease causing skin inflammation and patches")
+   st.image("https://my.clevelandclinic.org/-/scassets/images/org/health/articles/6866-psoriasis")
    st.write("Some symptoms are red, scaly patches, itching, silvery scales, nail changes")
    st.write("No specific prevention, but managing stress and maintaining a healthy lifestyle can help reduce flare-ups")
 
@@ -230,6 +245,7 @@ with col3:
    # Impetigo
    st.header("Impetigo")
    st.write("Bacterial skin infection characterized by red sores that can break open, ooze, and form a yellow-brown crust")
+   st.image("https://www.dhs.wisconsin.gov/sites/default/files/styles/large/public/dam/image/5/impetigo-ecthyma-skin-infection.jpg?itok=ROLXhLUC")
    st.write("Some symptoms are red sores, yellow-brown crust, itching, rash")
    st.write("Some ways to prevent impetigo are maintaining good personal hygiene, avoiding close contact with infected individuals, keeping wounds clean and covered")
 

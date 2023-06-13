@@ -49,6 +49,12 @@ with col1:
    st.write("Some common symptoms of typhoid include high fever, stomach pain, headache, and loss of appetite.")
    st.write("Some ways to prevent typhoid include practicing good hygiene, especially washing hands before eating or preparing food, and consuming safe and clean water and food")
    
+    st.header("Hepatitis ")
+   st.write("A disease resulting in inflammation of the liver, often caused by a virus that is transmitted from person to person through close contact. There is also a form of hepatitis called alcoholic hepatitis that can be caused by drinking in excess. ")
+   st.image(" https://medlineplus.gov/images/Hepatitis_share.jpg")
+   st.write(" fever, fatigue, loss of appetite, nausea, vomiting, dark urine, joint pain, etc.")
+   st.write("Getting vaccinated, avoid contact with blood, washing hands thoroughly, and avoiding excessive drinking.")
+   
 
 with col2:
    st.header("AIDS")

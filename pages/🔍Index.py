@@ -222,3 +222,16 @@ with col3:
    st.write("Chronic autoimmune disease causing skin inflammation and patches")
    st.write("Some symptoms are red, scaly patches, itching, silvery scales, nail changes")
    st.write("No specific prevention, but managing stress and maintaining a healthy lifestyle can help reduce flare-ups")
+
+
+   # Impetigo
+   st.header("Impetigo")
+   st.write("Bacterial skin infection characterized by red sores that can break open, ooze, and form a yellow-brown crust")
+   st.write("Some symptoms are red sores, yellow-brown crust, itching, rash")
+   st.write("Some ways to prevent impetigo are maintaining good personal hygiene, avoiding close contact with infected individuals, keeping wounds clean and covered")
+
+   # Fungal Infection
+   st.header("Fungal Infection")
+   st.write("Infection caused by fungi, such as yeast or molds, that can affect the skin, nails, or mucous membranes")
+   st.write("Some symptoms are itching, redness, rash, peeling skin")
+   st.write("Some ways to prevent fungal infection are keeping the skin clean and dry, avoiding sharing personal items, wearing breathable fabrics")

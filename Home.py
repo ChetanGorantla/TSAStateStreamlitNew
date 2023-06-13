@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.warning("This page contains graphic content which may not be suitable for all users.")
+
 st.set_page_config(page_title="KGK Diagnosis", page_icon="🏠")
 st.markdown("# KGK Diagnosis")
 

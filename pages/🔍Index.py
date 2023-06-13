@@ -74,7 +74,7 @@ with col1:
    st.write("Symptoms are Bright red bleeding.")
    st.write("This can be prevented by avoiding long periods of sitting, eat high fiber foods, and eat lots of vegetables and fruits.")
    
-   st.write("Myocardial infarction.")
+   st.header("Myocardial infarction.")
    st.write("A sudden blockage of blood flow to the heart.")
    st.write("Symptoms are Chest pain, shortness of breath, sweating, nausea, arm/jaw pain.")
    st.write("This can be prevented by Healthy lifestyle, regular exercise, balanced diet, no smoking.")

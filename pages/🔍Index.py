@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config(page_title="Index", page_icon="🔍")
 col1, col2, col3 = st.columns([8,8,8], gap = "large")
 #source - Mayo Clinic, ChatGPT
 with col1:

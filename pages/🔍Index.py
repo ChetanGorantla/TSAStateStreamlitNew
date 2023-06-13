@@ -212,7 +212,7 @@ with col3:
    st.write("Some ways to prevent acne are proper skincare, regular cleansing, avoiding excessive oil-based products")
 
    # Urinary Tract Infection
-   st.header("Urinary Tract Infection (UTI)")
+   st.header("(UTI)")
    st.write("Infection in the urinary system, often caused by bacteria")
    st.write("Some symptoms are frequent urination, burning sensation, cloudy urine, abdominal pain")
    st.write("Some ways to prevent urinary tract infection are staying hydrated, proper hygiene, urinating after sexual activity")

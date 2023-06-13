@@ -128,15 +128,15 @@ with col2:
    st.write("Ways to prevent varicose veins are regular exercise, maintaining a healthy weight, avoiding prolonged sitting or standing")
 
    # Hypothyroidism
-   st.header("Hypo")
-   st.write("-thyroidism")
+   st.header("Hypo-")
+   st.write("thyroidism")
    st.write("Underactive thyroid gland, resulting in low thyroid hormone levels")
    st.write("Some symptoms are fatigue, weight gain, cold intolerance, dry skin, depression")
    st.write("No specific prevention, but early detection and treatment are important")
 
    # Hyperthyroidism
    st.header("Hyper-")
-   st.write("-thyroidism")
+   st.write("thyroidism")
    st.write("Overactive thyroid gland, leading to excessive thyroid hormone production")
    st.write("Some symptoms are weight loss, rapid heartbeat, tremors, anxiety, heat intolerance")
    st.write("No specific prevention, but early detection and treatment are crucial")

@@ -121,6 +121,44 @@ with col2:
    st.write("Some common symptoms of migraines include severe headaches, sensitivity to light and sound, and nausea.")
    st.write("Some ways to prevent migraines include identifying and avoiding triggers such as stress, certain foods, and lack of sleep, maintaining a regular sleep schedule, managing stress levels, and discussing with a healthcare professional for preventive medication options.")
 
+   # Varicose Veins
+   st.header("Varicose Veins")
+   st.write("Enlarged and twisted veins, usually in the legs")
+   st.write("Some symptoms are bulging veins, leg pain, swelling, heaviness, cramping")
+   st.write("Ways to prevent varicose veins are regular exercise, maintaining a healthy weight, avoiding prolonged sitting or standing")
+
+   # Hypothyroidism
+   st.header("Hypothyroidism")
+   st.write("Underactive thyroid gland, resulting in low thyroid hormone levels")
+   st.write("Some symptoms are fatigue, weight gain, cold intolerance, dry skin, depression")
+   st.write("No specific prevention, but early detection and treatment are important")
+
+   # Hyperthyroidism
+   st.header("Hyperthyroidism")
+   st.write("Overactive thyroid gland, leading to excessive thyroid hormone production")
+   st.write("Some symptoms are weight loss, rapid heartbeat, tremors, anxiety, heat intolerance")
+   st.write("No specific prevention, but early detection and treatment are crucial")
+
+   # Hypoglycemia
+   st.header("Hypoglycemia")
+   st.write("Low blood sugar levels")
+   st.write("Some symptoms are shakiness, dizziness, sweating, confusion, hunger")
+   st.write("Some ways to prevent hypoglycemia are balanced diet with regular meals, avoiding excessive sugar intake")
+
+   # Osteoarthritis
+   st.header("Osteoarthritis")
+   st.write("Degenerative joint disease causing joint pain and stiffness")
+   st.write("Some symptoms are joint pain, stiffness, swelling, decreased range of motion")
+   st.write("Some ways to prevent osteoarthritis are regular exercise, maintaining a healthy weight, protecting joints from injury")
+
+   # Arthritis
+   st.header("Arthritis")
+   st.write("Inflammation of joints, causing pain and stiffness")
+   st.write("Some symptoms are joint pain, swelling, stiffness, reduced mobility")
+   st.write("Some ways to prevent arthritis are regular exercise, maintaining a healthy weight, avoiding joint injuries")
+
+   # Paroxysmal Positional Vertigo
+   
 with col3:
    st.header("Cervical Spondylosis")
    st.write("Cervical spondylosis is a degenerative condition that affects the joints and discs in the neck, leading to pain and other associated symptoms.")

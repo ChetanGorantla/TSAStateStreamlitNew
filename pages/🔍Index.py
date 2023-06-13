@@ -129,7 +129,7 @@ with col2:
 
    # Hypothyroidism
    st.header("Hypo")
-   st.header("thyroidism")
+   st.write("-thyroidism")
    st.write("Underactive thyroid gland, resulting in low thyroid hormone levels")
    st.write("Some symptoms are fatigue, weight gain, cold intolerance, dry skin, depression")
    st.write("No specific prevention, but early detection and treatment are important")

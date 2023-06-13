@@ -131,7 +131,7 @@ with col2:
    st.write("Ways to prevent varicose veins are regular exercise, maintaining a healthy weight, avoiding prolonged sitting or standing")
 
    # Hypothyroidism
-   st.header("Hypo-\nthyroidism")
+   st.header("Hypo- thyroidism")
    #st.write("thyroidism")
    st.write("Underactive thyroid gland, resulting in low thyroid hormone levels")
    st.image("https://assets.medpagetoday.net/media/images/99xxx/99599.jpg?width=0.6")
@@ -139,7 +139,7 @@ with col2:
    st.write("No specific prevention, but early detection and treatment are important")
 
    # Hyperthyroidism
-   st.header("Hyper-\nthyroidism")
+   st.header("Hyper- thyroidism")
    #st.write("thyroidism")
    st.write("Overactive thyroid gland, leading to excessive thyroid hormone production")
    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjE8klHQXqMHBbwLe4lH0onUMTKclLa97GshVjmBW1pw&usqp=CAU&ec=48600113")

@@ -57,7 +57,7 @@ with col1:
    
    st.header("Tuberculosis")
    st.write("A bacterial disease caused by Mycobacterium tuberculosis that primarily affects the lungs.")
-   st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.everydayhealth.com%2Ftuberculosis%2Fguide%2Flatent%2F&psig=AOvVaw1RqsoBhI1tnoVe7T13e4W7&ust=1686771548502000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJi3lOn_wP8CFQAAAAAdAAAAABAE")
+   st.image("https://scitechdaily.com/images/Secondary-Tuberculosis-Infection-Anatomy-Image.jpg")
    st.write("The symptoms are Chills, fatigue, fever, pain in the chest region, night sweats, loss of muscle, etc.")
    st.write("This can be prevented by getting treated immediately, vaccination, washing hands after coughing or sneezing, etc.")
 

@@ -251,13 +251,12 @@ with col3:
    st.image("https://img.medscape.com/thumbnail_library/dt_201109_myocardial_infarction_800x450.jpg")
    st.write("Symptoms are Chest pain, shortness of breath, sweating, nausea, arm/jaw pain.")
    st.write("This can be prevented by Healthy lifestyle, regular exercise, balanced diet, no smoking.")
-
- streamlit_style = """
-			<style>
-			@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
-			html, body, [class*="css"]  {
-			font-family: 'Raleway', sans-serif;
-			}
-			</style>
-			"""
+streamlit_style = """
+		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+		html, body, [class*="css"]  {
+		font-family: 'Raleway', sans-serif;
+		}
+		</style>
+		"""
 st.markdown(streamlit_style, unsafe_allow_html=True)

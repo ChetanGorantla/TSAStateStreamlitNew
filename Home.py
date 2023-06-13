@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="KGK Diagnosis", page_icon="🏠")
 st.markdown("# KGK Diagnosis")
 
-st.image("Screenshot 2023-02-17 235252.png")
+st.image("tsalogo.png")
 st.write(
     "Welcome! KGK is a univeral medical diagnostic tool with a range of functionality."
 )

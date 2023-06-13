@@ -70,7 +70,7 @@ with col1:
    st.header("Pneumonia")
    st.write("An infection that targets one or both lungs.")
    st.image("https://stories.cnnbrasil.com.br/wp-content/uploads/sites/9/2021/05/capa-pneumonia.png?w=640&h=853&crop=1")
-   st.write("Cough, fever, chills, and breathing difficulties.")
+   st.write("Symptoms are Cough, fever, chills, and breathing difficulties.")
    st.write("Good hygiene, avoiding smoking, engaging in regular exercise, maintaining a good diet.")
 
    st.header("Hemorrhoids")
@@ -131,16 +131,16 @@ with col2:
    st.write("Ways to prevent varicose veins are regular exercise, maintaining a healthy weight, avoiding prolonged sitting or standing")
 
    # Hypothyroidism
-   st.header("Hypo-")
-   st.write("thyroidism")
+   st.header("Hypo-\nthyroidism")
+   #st.write("thyroidism")
    st.write("Underactive thyroid gland, resulting in low thyroid hormone levels")
    st.image("https://assets.medpagetoday.net/media/images/99xxx/99599.jpg?width=0.6")
    st.write("Some symptoms are fatigue, weight gain, cold intolerance, dry skin, depression")
    st.write("No specific prevention, but early detection and treatment are important")
 
    # Hyperthyroidism
-   st.header("Hyper-")
-   st.write("thyroidism")
+   st.header("Hyper-\nthyroidism")
+   #st.write("thyroidism")
    st.write("Overactive thyroid gland, leading to excessive thyroid hormone production")
    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjE8klHQXqMHBbwLe4lH0onUMTKclLa97GshVjmBW1pw&usqp=CAU&ec=48600113")
    st.write("Some symptoms are weight loss, rapid heartbeat, tremors, anxiety, heat intolerance")

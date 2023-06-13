@@ -1,10 +1,11 @@
 import streamlit as st
 
 st.set_page_config(page_title="Index", page_icon="🔍")
+st.warning("This page contains graphic content which may not be suitable for all users.")
 col1, col2, col3 = st.columns([8,8,8], gap = "large")
 #source - Mayo Clinic, ChatGPT
 
-st.warning("This page contains graphic content which may not be suitable for all users.")
+
 with col1:
    st.header("Fungal Infection")
    st.write("A Fungal Infection is a fungus that invades the tissue which can cause a disease that's confined to the skin, spreads into tissue, bones, and organs, or affects the whole body.")

@@ -54,6 +54,30 @@ with col1:
    st.write("Some symptoms are fever, fatigue, loss of appetite, nausea, vomiting, dark urine, joint pain, etc.")
    st.write("Some ways to prevent hepatitis are getting vaccinated, avoid contact with blood, washing hands thoroughly, and avoiding excessive drinking.")
    
+   st.header("Tuberculosis")
+   st.write("Definition: A bacterial disease caused by Mycobacterium tuberculosis that primarily affects the lungs.")
+   st.write("Symptoms: Chills, fatigue, fever, pain in the chest region, night sweats, loss of muscle, etc.")
+   st.write("Ways to prevent it: Getting treated immediately, vaccination, washing hands after coughing or sneezing, etc.")
+
+   st.header("Common Cold")
+   st.write("Definition: A mild infection of the upper respiratory tract.")
+   st.write("Symptoms: Runny nose, sneezing, congestion, headaches, etc.")
+   st.write("Ways to prevent it: Wash hands often, avoid contact with sick people, get about 8 hours of sleep a night")
+
+   st.header("Pneumonia")
+   st.write("Definition: An infection that targets one or both lungs.")
+   st.write("Symptoms: Cough, fever, chills, and breathing difficulties.")
+   st.write("Ways to prevent it: Good hygiene, avoiding smoking, engaging in regular exercise, maintaining a good diet.")
+
+   st.header("Hemorrhoids")
+   st.write("Definition: Swollen veins that appear from inside the rectum.")
+   st.write("Symptoms: Bright red bleeding.")
+   st.write("Ways to prevent it: Avoid long periods of sitting, eat high fiber foods, and eat lots of vegetables and fruits.")
+   
+   st.write("Name: Myocardial infarction.")
+   st.write("What is it: A sudden blockage of blood flow to the heart.")
+   st.write("Symptoms: Chest pain, shortness of breath, sweating, nausea, arm/jaw pain.")
+   st.write("Prevention: Healthy lifestyle, regular exercise, balanced diet, no smoking.")
 
 with col2:
    st.header("AIDS")

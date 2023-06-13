@@ -134,7 +134,7 @@ with col2:
    st.write("No specific prevention, but early detection and treatment are important")
 
    # Hyperthyroidism
-   st.header("Hyperthyroidism")
+   st.header("Hyperthyro..")
    st.write("Overactive thyroid gland, leading to excessive thyroid hormone production")
    st.write("Some symptoms are weight loss, rapid heartbeat, tremors, anxiety, heat intolerance")
    st.write("No specific prevention, but early detection and treatment are crucial")

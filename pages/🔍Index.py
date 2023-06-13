@@ -198,6 +198,27 @@ with col3:
    st.write("Some common symptoms of dengue include high fever, severe headache, joint and muscle pain, and rash.")
    st.write("Some ways to prevent dengue include eliminating mosquito breeding sites, using mosquito repellents, wearing protective clothing, and using bed nets. Additionally, practicing good hygiene and seeking medical care for suspected cases can help prevent complications.")
    
-   
 
+   # Paroxysmal Positional Vertigo
+   st.header("Paroxysmal Positional Vertigo (PPV)")
+   st.write("Brief episodes of vertigo triggered by changes in head position")
+   st.write("Some symptoms are spinning sensation, dizziness, nausea, imbalance")
+   st.write("No specific prevention, but avoiding sudden head movements can help manage symptoms")
 
+   # Acne
+   st.header("Acne")
+   st.write("Skin condition characterized by pimples and inflammation")
+   st.write("Some symptoms are pimples, blackheads, whiteheads, redness, oily skin")
+   st.write("Some ways to prevent acne are proper skincare, regular cleansing, avoiding excessive oil-based products")
+
+   # Urinary Tract Infection
+   st.header("Urinary Tract Infection (UTI)")
+   st.write("Infection in the urinary system, often caused by bacteria")
+   st.write("Some symptoms are frequent urination, burning sensation, cloudy urine, abdominal pain")
+   st.write("Some ways to prevent urinary tract infection are staying hydrated, proper hygiene, urinating after sexual activity")
+
+   # Psoriasis
+   st.header("Psoriasis")
+   st.write("Chronic autoimmune disease causing skin inflammation and patches")
+   st.write("Some symptoms are red, scaly patches, itching, silvery scales, nail changes")
+   st.write("No specific prevention, but managing stress and maintaining a healthy lifestyle can help reduce flare-ups")

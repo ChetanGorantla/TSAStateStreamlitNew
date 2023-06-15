@@ -13,7 +13,10 @@ import pickle
 
 st.set_page_config(page_title="General Disease Predictor", page_icon="🦠")
 filename = "gendisease/gendisease.sav"
-
+st.markdown(""" <style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
 model = pickle.load(open(filename, "rb"))
 
 

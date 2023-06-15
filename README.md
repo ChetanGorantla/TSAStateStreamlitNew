@@ -1,1 +1,1 @@
-Streamlit Link:https://kgkdiagnostics.streamlit.app/
+Streamlit Link:https://kgkdiagnosticsupdate.streamlit.app/

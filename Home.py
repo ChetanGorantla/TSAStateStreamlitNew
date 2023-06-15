@@ -14,7 +14,7 @@ st.write(
     "Welcome! KGK is a univeral medical diagnostic tool with a range of functionality."
 )
 st.write(
-    "Choose a page to the left most consistent with the particular problem you are having, and you can find more information on the individual screens. On the final page, we can help you locate the nearest hospital in case you need to seek medical attention."
+    "Choose a page to the left most consistent with the particular problem you are having, and you can find more information on the individual screens. Our Hospital Tracker allows you to locate Hospitals nearby to your location."
 )
 
 footer = """

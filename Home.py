@@ -3,6 +3,11 @@ import streamlit as st
 
 st.set_page_config(page_title="KGK Diagnosis", page_icon="🏠")
 st.markdown("# KGK Diagnosis")
+st.markdown(""" <style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
+
 
 st.image("tsalogo.png")
 st.write(

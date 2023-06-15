@@ -1,7 +1,10 @@
 import streamlit as st
 import requests
 st.set_page_config(page_title="Find Nearby Hospitals", page_icon="🏥")
-
+st.markdown(""" <style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
 @st.cache_resource
 def get_user_location():
     ip_url = "https://api.ipify.org"

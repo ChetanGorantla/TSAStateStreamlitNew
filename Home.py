@@ -9,7 +9,7 @@ footer {visibility: hidden;}
 </style> """, unsafe_allow_html=True)
 
 
-st.image("tsalogo.png", width = 1000)
+st.image("tsalogo.png", width = 400)
 st.write(
     "Welcome! KGK is a univeral medical diagnostic tool with a range of functionality."
 )

@@ -25,13 +25,13 @@ col1, col2 = st.columns(2)
 #Inputs Column 1
 avg_glucose_level = col1.number_input("What is your average glucose level?", value = 0, min_value = 0, max_value = 300)
 bmi = col1.number_input("What is your BMI (Body Mass Index)?", value = 20, min_value = 20, max_value = 40)
-smoking_status = col2.selectbox("What is your smoking status?", ("Never smokes", "Formerly smoked", "Smokes", "Unknown"))
+smoking_status = col1.selectbox("What is your smoking status?", ("Never smokes", "Formerly smoked", "Smokes", "Unknown"))
 
 #Inputs Column 2
 work_type = col2.selectbox("What is your form of work?", ("Private", "Self-employed", "Govt. job"))
 residence_type = col2.selectbox("What is your area of residency?", ("Urban","Rural"))
-hypertension = col1.checkbox("Do you have hypertension?")
-heart_disease = col1.checkbox("Do you have heart disease?")
+hypertension = col2.checkbox("Do you have hypertension?")
+heart_disease = col2.checkbox("Do you have heart disease?")
 married = col2.checkbox("Are you married?")
 
 predict = col1.button("Predict")

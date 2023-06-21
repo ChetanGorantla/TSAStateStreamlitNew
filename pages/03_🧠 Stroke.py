@@ -36,5 +36,5 @@ married = col2.checkbox("Are you married?")
 
 predict = col1.button("Predict")
                                                           
-
+st.markdown(streamlit_style, unsafe_allow_html=True)
 

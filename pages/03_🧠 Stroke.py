@@ -20,3 +20,5 @@ col1, col2 = st.columns(2)
 
 hypertension = col1.checkbox("Do you have hypertension?")
 heart_disease = col1.checkbox("Do you have heart disease?")
+avg_glucose_level = col1.number_input("What is your average glucose level?", value = 0, min_value = 0, max_value = 300)
+

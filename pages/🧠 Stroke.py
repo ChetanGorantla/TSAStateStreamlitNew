@@ -8,5 +8,5 @@ st.markdown(""" <style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 </style> """, unsafe_allow_html=True)
-st.markdown("# Diabetes  Predictor")
+st.markdown("# Stroke Predictor")
 st.write("Input your symptoms below")

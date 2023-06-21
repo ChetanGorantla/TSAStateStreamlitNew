@@ -35,7 +35,12 @@ heart_disease = col2.checkbox("Do you have heart disease?")
 married = col2.checkbox("Are you married?")
 
 predict = col1.button("Predict")
-                                                          
+
+
+
+
+
+#styling
 streamlit_style = """
 			<style>
 			@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');

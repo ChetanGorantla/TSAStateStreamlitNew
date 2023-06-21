@@ -11,7 +11,7 @@ footer {visibility: hidden;}
 st.markdown("# Stroke Predictor")
 st.write("Input your symptoms below")
 
-age = st.number_input("How old are you?", value=25, min_value=25, max_value=70) 
+age = st.number_input("How old are you?", value=25, min_value=25, max_value=100) 
 option = st.selectbox(
     'What is your sex?',
     ('Male', 'Female'))

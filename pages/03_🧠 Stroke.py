@@ -18,7 +18,9 @@ option = st.selectbox(
 
 col1, col2 = st.columns(2)
 
+avg_glucose_level = col1.number_input("What is your average glucose level?", value = 0, min_value = 0, max_value = 300)
+bmi = col1.number_input("What is your BMI (Body Mass Index)?", value = 20, min_value = 20, max_value = 40)
 hypertension = col1.checkbox("Do you have hypertension?")
 heart_disease = col1.checkbox("Do you have heart disease?")
-avg_glucose_level = col1.number_input("What is your average glucose level?", value = 0, min_value = 0, max_value = 300)
+
 

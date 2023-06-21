@@ -34,7 +34,7 @@ residence_type = col2.selectbox("What is your area of residency?", ("Urban","Rur
 smoking_status = col2.selectbox("What is your smoking status?", ("Never smokes", "Formerly smoked", "Smokes", "Unknown"))
 married = col2.checkbox("Are you married?")
 
-predict = st.button("Predict")
+predict = col2.button("Predict")
                                                           
 
 

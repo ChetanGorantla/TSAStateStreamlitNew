@@ -23,4 +23,10 @@ bmi = col1.number_input("What is your BMI (Body Mass Index)?", value = 20, min_v
 hypertension = col1.checkbox("Do you have hypertension?")
 heart_disease = col1.checkbox("Do you have heart disease?")
 
+married = col2.checkbox("Are you married?")
+work_type = col2.selectbox("What is your form of work?", ("Private", "Self-employed", "Govt. job"))
+residence_type = col2.selectbox("What is your area of residency?", ("Urban","Rural"))
+smoking_status = col2.selectbox("What is your smoking status?", ("Never smokes", "Formerly smoked", "Smokes", "Unknown"))
+                                                          
+
 

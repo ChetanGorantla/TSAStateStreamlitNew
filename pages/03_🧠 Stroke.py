@@ -38,3 +38,4 @@ predict = col1.button("Predict")
                                                           
 st.markdown(streamlit_style, unsafe_allow_html=True)
 
+st.markdown(footer, unsafe_allow_html=True)

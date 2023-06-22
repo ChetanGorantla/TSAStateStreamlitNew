@@ -37,7 +37,7 @@ def main():
     heart_disease = 1 if heart_disease == "Yes" else 0
     gender = 1 if gender == "Male" else 0
     ever_married = 1 if ever_married == "Yes" else 0
-    Residence_type = 1 if gender == "Urban" else 0
+    Residence_type = 1 if Residence_type == "Urban" else 0
 
     smoking_map = {
         "Unknown": 0,

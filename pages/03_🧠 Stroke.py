@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 
 #Page details
-st.set_page_config(page_title="Diabetes Predictor", page_icon="🧠")
+st.set_page_config(page_title="Stroke Predictor", page_icon="🧠")
 st.markdown(""" <style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}

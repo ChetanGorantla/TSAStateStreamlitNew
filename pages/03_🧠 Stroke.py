@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 import pickle
+import numpy as np
 
 #Page details
 st.set_page_config(page_title="Stroke Predictor", page_icon="🧠")

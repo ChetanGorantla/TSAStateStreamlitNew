@@ -11,7 +11,7 @@ footer {visibility: hidden;}
 </style> """, unsafe_allow_html=True)
 
 # Load the trained model
-model = pickle.load(open('model.sav', 'rb'))
+model = pickle.load(open('stroke.sav', 'rb'))
 
 def predict_stroke(features):
     features = np.array(features).reshape(1, -1)

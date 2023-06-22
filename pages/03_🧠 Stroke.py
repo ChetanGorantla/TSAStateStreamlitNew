@@ -1,10 +1,8 @@
 import streamlit as st
-import joblib
-import pandas as pd
-import pickle
 import numpy as np
+import pickle
 
-#Page details
+# Page details
 st.set_page_config(page_title="Stroke Predictor", page_icon="🧠")
 st.markdown(""" <style>
 #MainMenu {visibility: hidden;}

@@ -62,8 +62,7 @@ residence_urban = 1 if residence_type == 'Urban' else 0
 residence_rural = 1 if residence_type == 'Rural' else 0
 
 # Select relevant features for prediction
-input_data = np.array([[age, sex_male, sex_female, avg_glucose_level, bmi, smoking_never, smoking_former, smoking_smokes, smoking_unknown, work_private, work_self_employed, work_govt_job, residence_urban, residence_rural, hypertension, heart_disease, married]], dtype=object)
-input_data = input_data[:, [0, 1, 2, 3, 4, 8, 9, 10, 11, 12]]
+input_data = np.array([[age, sex_male, sex_female, avg_glucose_level, bmi, smoking_never, smoking_former, smoking_smokes, smoking_unknown, married]], dtype=object)
 
 if predict:
     try:

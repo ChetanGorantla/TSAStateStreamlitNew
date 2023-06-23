@@ -1,75 +1,80 @@
 import streamlit as st
 import pandas as pd
-import pickle
 import numpy as np
+import pickle
 
-# Page details
-st.set_page_config(page_title="Stroke Predictor", page_icon="🧠")
-st.markdown(""" <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style> """, unsafe_allow_html=True)
+# Load the trained model
+with open("model.pickle", "rb") as f:
+    model = pickle.load(f)
 
-st.markdown("# Stroke Predictor")
-st.write("Input your symptoms below")
+# Function to preprocess the data
+def preprocess_data(df):
+    # Encode categorical features
+    label_encoder = LabelEncoder()
+    df['gender'] = label_encoder.fit_transform(df['gender'])
+    df["Residence_type"] = label_encoder.fit_transform(df["Residence_type"])
+    df["ever_married"] = label_encoder.fit_transform(df["ever_married"])
+    df['smoking_status'] = label_encoder.fit_transform(df['smoking_status'])
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
+    # Perform one-hot encoding
+    to_encode = pd.get_dummies(df[['work_type']])
+    df = df.merge(to_encode, left_index=True, right_index=True, how='left')
+    df.drop(['work_type'], inplace=True, axis=1)
 
-# Load the ML model
-try:
-    model = pickle.load(open('svm_model.pkl', 'rb'))
-except Exception as e:
-    st.error(f"Error loading the model: {e}")
+    return df
 
-# Inputs
-age = st.number_input("How old are you?", value=25, min_value=25, max_value=100)
-sex = st.selectbox('What is your sex?', ('Male', 'Female'))
+# Function to make predictions
+def predict_stroke(data):
+    prediction = model.predict(data)
+    return prediction
 
-# Initializing columns
-col1, col2 = st.columns(2)
+# Streamlit app
+def main():
+    st.title("Stroke Prediction")
+    st.write("Enter the patient's information to predict the likelihood of a stroke.")
 
-# Inputs Column 1
-avg_glucose_level = col1.number_input("What is your average glucose level?", value=0.0, min_value=0.0, max_value=300.0)
-bmi = col1.number_input("What is your BMI (Body Mass Index)?", value=20.0, min_value=20.0, max_value=40.0)
-smoking_status = col1.selectbox("What is your smoking status?", ("Never smokes", "Formerly smoked", "Smokes", "Unknown"))
+    # Create input fields for user input
+    age = st.slider("Age", min_value=1, max_value=100, value=30)
+    hypertension = st.radio("Hypertension", ['Yes', 'No'])
+    heart_disease = st.radio("Heart Disease", ['Yes', 'No'])
+    avg_glucose_level = st.number_input("Average Glucose Level", min_value=1.0, step=1.0, value=100.0)
+    bmi = st.number_input("BMI", min_value=1.0, step=1.0, value=25.0)
+    gender = st.selectbox("Gender", ['Male', 'Female'])
+    residence_type = st.selectbox("Residence Type", ['Urban', 'Rural'])
+    ever_married = st.selectbox("Ever Married", ['Yes', 'No'])
+    smoking_status = st.selectbox("Smoking Status", ['formerly smoked', 'never smoked', 'smokes'])
+    work_type = st.selectbox("Work Type", ['Private', 'Self-employed', 'Govt_job', 'Children'])
 
-# Inputs Column 2
-work_type = col2.selectbox("What is your form of work?", ("Private", "Self-employed", "Govt. job"))
-residence_type = col2.selectbox("What is your area of residency?", ("Urban", "Rural"))
-hypertension = col2.checkbox("Do you have hypertension?")
-heart_disease = col2.checkbox("Do you have heart disease?")
-married = col2.checkbox("Are you married?")
+    # Prepare user input data
+    input_data = {
+        'age': [age],
+        'hypertension': [1 if hypertension == 'Yes' else 0],
+        'heart_disease': [1 if heart_disease == 'Yes' else 0],
+        'avg_glucose_level': [avg_glucose_level],
+        'bmi': [bmi],
+        'gender': [gender],
+        'Residence_type': [residence_type],
+        'ever_married': [ever_married],
+        'smoking_status': [smoking_status],
+        'work_type_Private': [1 if work_type == 'Private' else 0],
+        'work_type_Self-employed': [1 if work_type == 'Self-employed' else 0],
+        'work_type_Govt_job': [1 if work_type == 'Govt_job' else 0],
+        'work_type_Children': [1 if work_type == 'Children' else 0]
+    }
+    input_df = pd.DataFrame(input_data)
 
-predict = col1.button("Predict")
+    # Preprocess user input data
+    processed_data = preprocess_data(input_df)
 
-# Prepare input data
-sex_male = 1 if sex == 'Male' else 0
-sex_female = 1 if sex == 'Female' else 0
+    if st.button("Predict"):
+        # Make prediction
+        prediction = predict_stroke(processed_data)
 
-# One-hot encode smoking status
-smoking_never = 1 if smoking_status == 'Never smokes' else 0
-smoking_former = 1 if smoking_status == 'Formerly smoked' else 0
-smoking_smokes = 1 if smoking_status == 'Smokes' else 0
-smoking_unknown = 1 if smoking_status == 'Unknown' else 0
-
-# One-hot encode work type
-work_private = 1 if work_type == 'Private' else 0
-work_self_employed = 1 if work_type == 'Self-employed' else 0
-work_govt_job = 1 if work_type == 'Govt. job' else 0
-
-# One-hot encode residence type
-residence_urban = 1 if residence_type == 'Urban' else 0
-residence_rural = 1 if residence_type == 'Rural' else 0
-
-# Select relevant features for prediction
-input_data = np.array([[age, sex_male, sex_female, avg_glucose_level, bmi, smoking_never, smoking_former, smoking_smokes, smoking_unknown, married]], dtype=object)
-
-if predict:
-    try:
-        prediction = model.predict(input_data)
+        # Display the prediction result
         if prediction[0] == 1:
-            st.write("The model predicts that you are likely to have a stroke.")
+            st.error("The patient is at high risk of a stroke.")
         else:
-            st.write("The model predicts that you are unlikely to have a stroke.")
-    except Exception as e:
-        st.error(f"Error predicting stroke: {e}")
+            st.success("The patient is at low risk of a stroke.")
+
+if __name__ == '__main__':
+    main()

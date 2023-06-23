@@ -27,8 +27,5 @@ if st.button('Predict'):
     st.write("You are unlikely to suffer from a stroke")
   else:
     st.write("You are at risk of suffering from a stroke")
-   
-
-
 if __name__ =='__main__':
   main()

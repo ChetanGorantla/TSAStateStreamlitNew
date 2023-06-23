@@ -5,11 +5,19 @@ import pickle
 st.set_option('deprecation.showfileUploaderEncoding',False) 
 model = pickle.load(open('stroke2.pkl','rb'))
 
-  age = st.slider("Input Your age", 0, 100)
-  hypertension = st.slider("Input your if you have hypertension with 0 for no and 1 for yes",0,1)
-  heartdisease = st.slider("Input your if you have heartdisease with 0 for no and 1 for yes",0 ,1)
-  sugar = st.slider("Put your average glucose level",150.0, 300.000)
-  bmi = st.slider("Input your BMI",0.0,70.0)
+st.set_page_config(page_title="Diabetes Predictor", page_icon="🧠")
+st.markdown(""" <style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
+st.markdown("# Diabetes  Predictor")
+st.write("Input your symptoms below")
+
+  age = st.slider("Input Your age", 0, 120)
+  hypertension = st.checkbox("Do you suffer from hypertension?")
+  heartdisease = st.checkbox("Do you suffer from heartdisease?")
+  sugar = st.slider("Please input your most recent measured glucose level",150.0, 300.000)
+  bmi = st.slider("Please input your BMI",0.0,70.0)
 
   inputs = [[age,hypertension,heartdisease,sugar,bmi]]
 
@@ -17,9 +25,9 @@ model = pickle.load(open('stroke2.pkl','rb'))
     result = model.predict(inputs)
     updated_res = result.flatten().astype(int)
     if updated_res == 0:
-       st.write("Not very Proabable you will have a stoke soon but still take good care of yourself regardless")
+       st.write("You are unlikely to suffer from a stroke")
     else:
-       st.write("It is Probable you might have a stroke soon therfore you should take better care of yourself")
+       st.write("You are at risk of suffering from a stroke")
    
 
 

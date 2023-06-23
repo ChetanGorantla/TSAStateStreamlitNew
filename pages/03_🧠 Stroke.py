@@ -52,15 +52,13 @@ smoking_former = 1 if smoking_status == 'Formerly smoked' else 0
 smoking_smokes = 1 if smoking_status == 'Smokes' else 0
 smoking_unknown = 1 if smoking_status == 'Unknown' else 0
 
-input_data = np.array([[age, sex_male, sex_female, avg_glucose_level, bmi, smoking_never, smoking_former, smoking_smokes, smoking_unknown, work_type, residence_type, hypertension, heart_disease, married]], dtype=object)
-input_data[:, [0, 3, 4, 5, 6, 7, 8, 11, 12, 13]] = input_data[:, [0, 3, 4, 5, 6, 7, 8, 11, 12, 13]].astype(float)
+# One-hot encode work type
+work_private = 1 if work_type == 'Private' else 0
+work_self_employed = 1 if work_type == 'Self-employed' else 0
+work_govt_job = 1 if work_type == 'Govt. job' else 0
 
-if predict:
-    try:
-        prediction = model.predict(input_data)
-        if prediction[0] == 1:
-            st.write("The model predicts that you are likely to have a stroke.")
-        else:
-            st.write("The model predicts that you are unlikely to have a stroke.")
-    except Exception as e:
-        st.error(f"Error predicting stroke: {e}")
+# One-hot encode residence type
+residence_urban = 1 if residence_type == 'Urban' else 0
+residence_rural = 1 if residence_type == 'Rural' else 0
+
+input_data = np.array([[age, sex_male, sex_female, avg_glucose_level, bmi, smoking_never, smoking_former, smoking_smokes, smoking_unknown, work_private, work_self_employed, work_govt_job, residence_urban, residence_rural, hypertension, heart_disease,

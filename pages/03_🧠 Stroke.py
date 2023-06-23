@@ -58,6 +58,8 @@ if predict:
     try:
         prediction = model.predict(input_data)
         if prediction[0] == 1:
-            st.write("The model predicts that you are likely to have a stroke")
+            st.write("The model predicts that you are likely to have a stroke.")
         else:
-            st.write("The model predicts that you have a low risk of suffering a stroke")
+            st.write("The model predicts that you are unlikely to have a stroke.")
+    except Exception as e:
+        st.error(f"Error predicting stroke: {e}")

@@ -17,7 +17,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Load the ML model
 try:
-    model = pickle.load(open('stroke2.pkl', 'rb'))
+    model = pickle.load(open('stroke.pkl', 'rb'))
 except Exception as e:
     st.error(f"Error loading the model: {e}")
 
@@ -46,15 +46,16 @@ predict = col1.button("Predict")
 sex_male = 1 if option == 'Male' else 0
 sex_female = 1 if option == 'Female' else 0
 
-input_data = np.array([[age, avg_glucose_level, bmi, smoking_status, work_type, residence_type, hypertension, heart_disease, married, sex_male, sex_female]], dtype=object)
-input_data[:, [0, 1, 2, 7, 8]] = input_data[:, [0, 1, 2, 7, 8]].astype(float)
+smoking_never = 1 if smoking_status == 'Never smokes' else 0
+smoking_formerly = 1 if smoking_status == 'Formerly smoked' else 0
+smoking_smokes = 1 if smoking_status == 'Smokes' else 0
+smoking_unknown = 1 if smoking_status == 'Unknown' else 0
+
+input_data = np.array([[age, avg_glucose_level, bmi, work_type, residence_type, hypertension, heart_disease, married, sex_male, sex_female, smoking_never, smoking_formerly, smoking_smokes, smoking_unknown]], dtype=object)
+input_data[:, [0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13]] = input_data[:, [0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13]].astype(float)
 
 if predict:
     try:
         prediction = model.predict(input_data)
         if prediction[0] == 1:
-            st.write("The model predicts that you are likely to have a stroke.")
-        else:
-            st.write("The model predicts that you are unlikely to have a stroke.")
-    except Exception as e:
-        st.error(f"Error predicting stroke: {e}")
+            st.write("The model predicts that you are likely to have a

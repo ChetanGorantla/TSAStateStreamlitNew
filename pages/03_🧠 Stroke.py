@@ -17,7 +17,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Load the ML model
 try:
-    model = pickle.load(open('stroke2.pkl', 'rb'))
+    model = pickle.load(open('stroke.pkl', 'rb'))
 except Exception as e:
     st.error(f"Error loading the model: {e}")
 
@@ -43,8 +43,11 @@ married = col2.checkbox("Are you married?")
 predict = col1.button("Predict")
 
 # Prepare input data
-input_data = np.array([[age, option, avg_glucose_level, bmi, smoking_status, work_type, residence_type, hypertension, heart_disease, married]], dtype=object)
-input_data[:, [0, 2, 3, 8, 9]] = input_data[:, [0, 2, 3, 8, 9]].astype(float)
+sex_male = 1 if option == 'Male' else 0
+sex_female = 1 if option == 'Female' else 0
+
+input_data = np.array([[age, avg_glucose_level, bmi, smoking_status, work_type, residence_type, hypertension, heart_disease, married, sex_male, sex_female]], dtype=object)
+input_data[:, [0, 1, 2, 7, 8]] = input_data[:, [0, 1, 2, 7, 8]].astype(float)
 
 if predict:
     try:

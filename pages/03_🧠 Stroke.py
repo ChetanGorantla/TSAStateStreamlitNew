@@ -46,8 +46,14 @@ predict = col1.button("Predict")
 sex_male = 1 if sex == 'Male' else 0
 sex_female = 1 if sex == 'Female' else 0
 
-input_data = np.array([[age, sex_male, sex_female, avg_glucose_level, bmi, smoking_status, work_type, residence_type, hypertension, heart_disease, married]], dtype=object)
-input_data[:, [0, 3, 4, 8, 9]] = input_data[:, [0, 3, 4, 8, 9]].astype(float)
+# One-hot encode smoking status
+smoking_never = 1 if smoking_status == 'Never smokes' else 0
+smoking_former = 1 if smoking_status == 'Formerly smoked' else 0
+smoking_smokes = 1 if smoking_status == 'Smokes' else 0
+smoking_unknown = 1 if smoking_status == 'Unknown' else 0
+
+input_data = np.array([[age, sex_male, sex_female, avg_glucose_level, bmi, smoking_never, smoking_former, smoking_smokes, smoking_unknown, work_type, residence_type, hypertension, heart_disease, married]], dtype=object)
+input_data[:, [0, 3, 4, 5, 6, 7, 8, 11, 12, 13]] = input_data[:, [0, 3, 4, 5, 6, 7, 8, 11, 12, 13]].astype(float)
 
 if predict:
     try:

@@ -5,15 +5,6 @@ import pickle
 st.set_option('deprecation.showfileUploaderEncoding',False) 
 model = pickle.load(open('stroke2.pkl','rb'))
 
-
-def main():
-  st.sidebar.header("Stroke Risk Prediction")
-  st.sidebar.text("This a Web app that tells you the predicted wether you will have a stoke or not.")
-  st.sidebar.header("Just fill in the information below")
-  st.sidebar.text("The NaiveBayes Classifier was used.")
-
-
-
   age = st.slider("Input Your age", 0, 100)
   hypertension = st.slider("Input your if you have hypertension with 0 for no and 1 for yes",0,1)
   heartdisease = st.slider("Input your if you have heartdisease with 0 for no and 1 for yes",0 ,1)

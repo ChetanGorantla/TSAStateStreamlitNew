@@ -45,13 +45,11 @@ predict = col1.button("Predict")
 inputs = [[age, option, avg_glucose_level, bmi, smoking_status, work_type, residence_type, hypertension, heart_disease, married]]
 
 if predict:
-    # Perform prediction using the loaded ML model
     try:
-        prediction = model.predict(inputs)
+        prediction = model.predict(np.array(inputs))
         if prediction[0] == 1:
             st.write("The model predicts that you are likely to have a stroke.")
         else:
             st.write("The model predicts that you are unlikely to have a stroke.")
     except Exception as e:
         st.error(f"Error predicting stroke: {e}")
-

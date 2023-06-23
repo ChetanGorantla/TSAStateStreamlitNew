@@ -17,13 +17,13 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Load the ML model
 try:
-    model = pickle.load(open('stroke2.pkl', 'rb'))
+    model = pickle.load(open('stroke.pkl', 'rb'))
 except Exception as e:
     st.error(f"Error loading the model: {e}")
 
 # Inputs
 age = st.number_input("How old are you?", value=25, min_value=25, max_value=100)
-option = st.selectbox('What is your sex?', ('Male', 'Female'))
+sex = st.selectbox('What is your sex?', ('Male', 'Female'))
 
 # Initializing columns
 col1, col2 = st.columns(2)
@@ -43,16 +43,11 @@ married = col2.checkbox("Are you married?")
 predict = col1.button("Predict")
 
 # Prepare input data
-sex_male = 1 if option == 'Male' else 0
-sex_female = 1 if option == 'Female' else 0
+sex_male = 1 if sex == 'Male' else 0
+sex_female = 1 if sex == 'Female' else 0
 
-smoking_never = 1 if smoking_status == 'Never smokes' else 0
-smoking_formerly = 1 if smoking_status == 'Formerly smoked' else 0
-smoking_smokes = 1 if smoking_status == 'Smokes' else 0
-smoking_unknown = 1 if smoking_status == 'Unknown' else 0
-
-input_data = np.array([[age, avg_glucose_level, bmi, work_type, residence_type, hypertension, heart_disease, married, sex_male, sex_female, smoking_never, smoking_formerly, smoking_smokes, smoking_unknown]], dtype=object)
-input_data[:, [0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13]] = input_data[:, [0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13]].astype(float)
+input_data = np.array([[age, sex_male, sex_female, avg_glucose_level, bmi, smoking_status, work_type, residence_type, hypertension, heart_disease, married]], dtype=object)
+input_data[:, [0, 3, 4, 8, 9]] = input_data[:, [0, 3, 4, 8, 9]].astype(float)
 
 if predict:
     try:

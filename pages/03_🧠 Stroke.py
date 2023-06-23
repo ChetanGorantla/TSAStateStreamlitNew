@@ -17,7 +17,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Load the ML model
 try:
-    model = pickle.load(open('stroke (1).pkl', 'rb'))
+    model = pickle.load(open('stroke3.pkl', 'rb'))
 except Exception as e:
     st.error(f"Error loading the model: {e}")
 

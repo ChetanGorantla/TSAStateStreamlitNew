@@ -12,12 +12,11 @@ footer {visibility: hidden;}
 </style> """, unsafe_allow_html=True)
 st.markdown("# Diabetes  Predictor")
 st.write("Input your symptoms below")
-
-  age = st.slider("Input Your age", 0, 120)
-  hypertension = st.checkbox("Do you suffer from hypertension?")
-  heartdisease = st.checkbox("Do you suffer from heartdisease?")
-  sugar = st.slider("Please input your most recent measured glucose level",150.0, 300.000)
-  bmi = st.slider("Please input your BMI",0.0,70.0)
+age = st.slider("Input Your age", 0, 120)
+hypertension = st.checkbox("Do you suffer from hypertension?")
+heartdisease = st.checkbox("Do you suffer from heartdisease?")
+sugar = st.slider("Please input your most recent measured glucose level",150.0, 300.000)
+bmi = st.slider("Please input your BMI",0.0,70.0)
 
   inputs = [[age,hypertension,heartdisease,sugar,bmi]]
 

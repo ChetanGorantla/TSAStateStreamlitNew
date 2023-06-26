@@ -5,7 +5,7 @@ import pickle
 from sklearn.preprocessing import LabelEncoder
 
 # Load the trained model
-with open("model.pickle", "rb") as f:
+with open("stroke.pickle", "rb") as f:
     model = pickle.load(f)
 
 # Function to preprocess the data

@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load the trained model
-model = pickle.load(open('model.sav', 'rb'))
+model = pickle.load(open('strokes.sav', 'rb'))
 
 # Function to predict stroke based on input features
 def predict_stroke(features):

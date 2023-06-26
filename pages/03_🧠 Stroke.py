@@ -1,81 +1,76 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 import pickle
-from sklearn.preprocessing import LabelEncoder
+import numpy as np
 
 # Load the trained model
-with open("stroke.pickle", "rb") as f:
-    model = pickle.load(f)
+model = pickle.load(open('model.sav', 'rb'))
 
-# Function to preprocess the data
-def preprocess_data(df):
-    # Encode categorical features
-    label_encoder = LabelEncoder()
-    df['gender'] = label_encoder.fit_transform(df['gender'])
-    df["Residence_type"] = label_encoder.fit_transform(df["Residence_type"])
-    df["ever_married"] = label_encoder.fit_transform(df["ever_married"])
-    df['smoking_status'] = label_encoder.fit_transform(df['smoking_status'])
+# Function to predict stroke based on input features
+def predict_stroke(features):
+    features = np.array(features).reshape(1, -1)
+    prediction = model.predict(features)
+    probability = model.predict_proba(features)[0][1]
+    return prediction, probability
 
-    # Perform one-hot encoding
-    to_encode = pd.get_dummies(df[['work_type']])
-    df = df.merge(to_encode, left_index=True, right_index=True, how='left')
-    df.drop(['work_type'], inplace=True, axis=1)
-
-    return df
-
-# Function to make predictions
-def predict_stroke(data):
-    prediction = model.predict(data)
-    return prediction
-
-# Streamlit app
+# Create a Streamlit web app
 def main():
-    st.title("Stroke Prediction")
-    st.write("Enter the patient's information to predict the likelihood of a stroke.")
+    # Set app title and description
+    st.title("Stroke Prediction Web App")
+    st.write("Enter the required information to predict the likelihood of stroke.")
 
-    # Create input fields for user input
-    age = st.slider("Age", min_value=1, max_value=100, value=30)
-    hypertension = st.radio("Hypertension", ['Yes', 'No'])
-    heart_disease = st.radio("Heart Disease", ['Yes', 'No'])
-    avg_glucose_level = st.number_input("Average Glucose Level", min_value=1.0, step=1.0, value=100.0)
-    bmi = st.number_input("BMI", min_value=1.0, step=1.0, value=25.0)
-    gender = st.selectbox("Gender", ['Male', 'Female'])
-    residence_type = st.selectbox("Residence Type", ['Urban', 'Rural'])
-    ever_married = st.selectbox("Ever Married", ['Yes', 'No'])
-    smoking_status = st.selectbox("Smoking Status", ['formerly smoked', 'never smoked', 'smokes'])
-    work_type = st.selectbox("Work Type", ['Private', 'Self-employed', 'Govt_job', 'Children'])
+    # Create input fields for user to enter information
+    age = st.number_input("Age", min_value=1, max_value=100, value=30)
+    hypertension = st.selectbox("Hypertension", ("Yes", "No"))
+    heart_disease = st.selectbox("Heart Disease", ("Yes", "No"))
+    avg_glucose_level = st.number_input("Average Glucose Level", min_value=0.0, value=80.0)
+    bmi = st.number_input("BMI", min_value=0.0, value=20.0)
+    gender = st.selectbox("Gender", ("Male", "Female"))
+    smoking_status = st.selectbox("Smoking Status", ("Unknown", "Formerly Smoked", "Never Smoked", "Smokes"))
+    ever_married = st.selectbox("ever_married", ("Yes", "No"))
+    work_type = st.selectbox("work_type Status", ("Private", "Self-employed", "children", "Govt_job","Never_worked"))
+    Residence_type = st.selectbox("Residence_type", ("Urban", "Rural"))
 
-    # Prepare user input data
-    input_data = {
-        'age': [age],
-        'hypertension': [1 if hypertension == 'Yes' else 0],
-        'heart_disease': [1 if heart_disease == 'Yes' else 0],
-        'avg_glucose_level': [avg_glucose_level],
-        'bmi': [bmi],
-        'gender': [gender],
-        'Residence_type': [residence_type],
-        'ever_married': [ever_married],
-        'smoking_status': [smoking_status],
-        'work_type_Private': [1 if work_type == 'Private' else 0],
-        'work_type_Self-employed': [1 if work_type == 'Self-employed' else 0],
-        'work_type_Govt_job': [1 if work_type == 'Govt_job' else 0],
-        'work_type_Children': [1 if work_type == 'Children' else 0]
+    # Convert categorical inputs to numerical values
+    hypertension = 1 if hypertension == "Yes" else 0
+    heart_disease = 1 if heart_disease == "Yes" else 0
+    gender = 1 if gender == "Male" else 0
+    ever_married = 1 if ever_married == "Yes" else 0
+    Residence_type = 1 if gender == "Urban" else 0
+
+    # Map smoking status to numerical values
+    smoking_map = {
+        "Unknown": 0,
+        "Formerly Smoked": 1,
+        "Never Smoked": 2,
+        "Smokes": 3
     }
-    input_df = pd.DataFrame(input_data)
+    smoking_status = smoking_map[smoking_status]
 
-    # Preprocess user input data
-    processed_data = preprocess_data(input_df)
+    # Map work_type status to numerical values
+    work_type_map = {
+        "Govt_job": 0,
+        "Never_worked": 1,
+        "Private": 2,
+        "Self-employed": 3,
+        "children": 4,
+    }
+    work_type = work_type_map[work_type]
 
-    if st.button("Predict"):
-        # Make prediction
-        prediction = predict_stroke(processed_data)
+    # Create a button to predict stroke
+    if st.button("Predict Stroke"):
+        # Gather input features
+        features = [age, hypertension, heart_disease, avg_glucose_level, bmi, gender, smoking_status, ever_married, work_type, Residence_type]
 
-        # Display the prediction result
-        if prediction[0] == 1:
-            st.error("The patient is at high risk of a stroke.")
+        # Predict stroke and probability
+        prediction, probability = predict_stroke(features)
+
+        # Display the prediction
+        if prediction[0] == 0:
+            st.write("Congratulations! You have a low risk of stroke.")
         else:
-            st.success("The patient is at low risk of a stroke.")
+            st.write("Warning! You are at a high risk of stroke.")
+            st.write("Probability of stroke:", probability)
 
-if __name__ == '__main__':
+# Run the web app
+if __name__ == "__main__":
     main()

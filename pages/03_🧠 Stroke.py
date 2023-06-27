@@ -6,7 +6,6 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import GradientBoostingRegressor as GBR
-from catboost import CatBoostClassifier
 
 import joblib
 

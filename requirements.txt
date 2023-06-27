@@ -17,3 +17,6 @@ streamlit-bokeh-events
 joblib
 scikit-learn
 pickle5
+catboost==0.26.1
+boto3==1.18.23
+botocore==1.21.23

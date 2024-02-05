@@ -23,7 +23,7 @@ def find_hospitals(max_radius):
         "location": location,
         "radius": radius,
         "type": "hospital",
-        "key": "AIzaSyBH7EzdJtxiYWVgJ_p-MgYU7k9kt1_R9CA"
+        "key": ""
     }
     response = requests.get(url, params=params)
     hospitals = response.json()["results"]

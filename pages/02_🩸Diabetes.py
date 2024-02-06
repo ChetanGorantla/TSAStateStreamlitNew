@@ -1,3 +1,4 @@
+"""
 import streamlit as st
 import joblib
 import pandas as pd
@@ -155,3 +156,4 @@ streamlit_style = """
 st.markdown(streamlit_style, unsafe_allow_html=True)
 
 st.markdown(footer, unsafe_allow_html=True)
+"""

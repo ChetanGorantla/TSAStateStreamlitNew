@@ -351,7 +351,7 @@ for i in range(len(skin)):
 co1, col2 = st.columns(2)
 
 skinselect = co1.multiselect(
-    "Choose any symptoms that are related to the integumentary system", skin
+    "Choose any symptoms that are related to the integumentary system", skin, help="Anything related to skin",
 )
 for i in range(len(digestion)):
     digestion[i] = digestion[i].replace("_", " ")

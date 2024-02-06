@@ -351,21 +351,21 @@ for i in range(len(skin)):
 co1, col2 = st.columns(2)
 
 skinselect = co1.multiselect(
-    "Choose any symptoms that are related to the integumentary system", skin, help="Anything related to skin",
+    "**Integumentary System**", skin, help="Anything related to skin",
 )
 for i in range(len(digestion)):
     digestion[i] = digestion[i].replace("_", " ")
     digestion[i] = digestion[i].title()
 # st.subheader("Digestive System")
 digestionselect = co1.multiselect(
-    "Choose any symptoms that are related to the digestive system", digestion, help="Anything related to food consumption",
+    "**Digestive System**", digestion, help="Anything related to food consumption",
 )
 for i in range(len(ent_respiratory)):
     ent_respiratory[i] = ent_respiratory[i].replace("_", " ")
     ent_respiratory[i] = ent_respiratory[i].title()
 # st.subheader("ENT/Respiratory System")
 respiratoryselect = co1.multiselect(
-    "Choose any symptoms that are related to the ENT/respiratory system",
+    "**ENT/Respiratory System**",
     ent_respiratory, help="Anything related to breathing and lungs",
 )
 for i in range(len(eyes)):
@@ -373,7 +373,7 @@ for i in range(len(eyes)):
     eyes[i] = eyes[i].title()
 # st.subheader("Eyes")
 eyeselect = co1.multiselect(
-    "Choose any symptoms that are related to your eyes",
+    "**Eyes**",
     eyes,
 )
 for i in range(len(musculoskeletal)):
@@ -381,7 +381,7 @@ for i in range(len(musculoskeletal)):
     musculoskeletal[i] = musculoskeletal[i].title()
 # st.subheader("Musculoskeletal System")
 musculoskeletalselect = co1.multiselect(
-    "Choose any symptoms that are related to your musculoskeletal system",
+    "**Musculoskeletal System**",
     musculoskeletal, help="Anything related to muscles and bones",
 )
 for i in range(len(body_temperature)):
@@ -389,7 +389,7 @@ for i in range(len(body_temperature)):
     body_temperature[i] = body_temperature[i].title()
 # st.subheader("Body Temperature")
 temperatureselect = col2.multiselect(
-    "Choose any symptoms that are related to your body temperature",
+    "**Body Temperature**",
     body_temperature,
 )
 for i in range(len(urinary)):
@@ -397,7 +397,7 @@ for i in range(len(urinary)):
     urinary[i] = urinary[i].title()
 # st.subheader("Urinary System")
 urinaryselect = col2.multiselect(
-    "Choose any symptoms that are related to your urinary system",
+    "**Urinary System**",
     urinary,
 )
 for i in range(len(emotional)):
@@ -405,7 +405,7 @@ for i in range(len(emotional)):
     emotional[i] = emotional[i].title()
 # st.subheader("Emotional/Energy")
 emotionselect = col2.multiselect(
-    "Choose any symptoms that are related to your emotions/level of energy",
+    "**Emotions/Energy**",
     emotional,
 )
 for i in range(len(circulatory)):
@@ -413,11 +413,11 @@ for i in range(len(circulatory)):
     circulatory[i] = circulatory[i].title()
 # st.subheader("Circulatory System")
 circulatoryselect = col2.multiselect(
-    "Choose any symptoms that are related to your circulatory system",
+    "**Circulatory System**",
     circulatory, help="Anything related to the heart and blood flow",
 )
 # st.subheader("Other")
-otherselect = col2.multiselect("Choose any other symptoms", other)
+otherselect = col2.multiselect("**Other Symptoms**", other)
 patientsymp = (
     skinselect
     + digestionselect

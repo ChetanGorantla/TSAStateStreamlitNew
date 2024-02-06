@@ -445,7 +445,7 @@ if st.button("Predict"):
     )
     st.write(
         """<h1 style="text-align:center"><span style="font-family:
-	URW Chancery L"><span style="background-color:#e74c3c">"""
+	Comic Sans MS"><span style="background-color:#e74c3c">"""
         + str(predictDisease(finalstr))
         + """</span></span></h1>
 	""",

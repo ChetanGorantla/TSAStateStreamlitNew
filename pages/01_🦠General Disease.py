@@ -18,7 +18,7 @@ st.markdown(""" <style>
 footer {visibility: hidden;}
 </style> """, unsafe_allow_html=True)
 model = pickle.load(open(filename, "rb"))
-country = ""
+continent = "Africa"
 
 symptoms = [
     "itching",

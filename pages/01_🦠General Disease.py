@@ -196,11 +196,11 @@ def predictDisease(symptoms):
 	if (continent == "Africa" and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
 	    svm_prediction = "Ebola"
 	if (continent == "Asia" and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
-	    svm_prediction = "Dengue fever"
+	    svm_prediction = "Dengue Fever"
 	if ((continent == "Europe" or continent == "South America") and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
-	    svm_prediction = "Lyme disease"
-	if (continent == "Africa" and svm_prediction == "Peptic ulcer"):
-	    svm_prediction = "Nile virus"
+	    svm_prediction = "Lyme Disease"
+	if (continent == "Africa" and svm_prediction == "Peptic Ulcer"):
+	    svm_prediction = "Nile Virus"
 	if (continent == "South America" and svm_prediction == "Jaundice"):
 	    svm_prediction = "Leptospirosis"
         return svm_prediction

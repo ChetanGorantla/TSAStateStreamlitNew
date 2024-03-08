@@ -193,6 +193,7 @@ def predictDisease(symptoms):
 
         input_data = np.array(input_data).reshape(1, -1)
         svm_prediction = data_dict["predictions_classes"][model.predict(input_data)[0]]
+	
 	if (continent == "Africa" and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
 	    svm_prediction = "Ebola"
 	if (continent == "Asia" and (svm_prediction == "GERD" or svm_prediction == "Allergy")):

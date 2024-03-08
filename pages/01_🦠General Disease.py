@@ -195,13 +195,13 @@ def predictDisease(symptoms):
         svm_prediction = data_dict["predictions_classes"][model.predict(input_data)[0]]
 	if (continent == "Africa" and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
         	svm_prediction = "Ebola"
-        if (continent == "Asia" and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
+        elif (continent == "Asia" and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
         	svm_prediction = "Dengue Fever"
-        if ((continent == "Europe" or continent == "South America") and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
+        elif ((continent == "Europe" or continent == "South America") and (svm_prediction == "GERD" or svm_prediction == "Allergy")):
         	svm_prediction = "Lyme Disease"
-        if (continent == "Africa" and svm_prediction == "Peptic Ulcer"):
+        elif (continent == "Africa" and svm_prediction == "Peptic Ulcer"):
         	svm_prediction = "Nile Virus"
-        if (continent == "South America" and svm_prediction == "Jaundice"):
+        elif (continent == "South America" and svm_prediction == "Jaundice"):
         	svm_prediction = "Leptospirosis"
         return svm_prediction
 

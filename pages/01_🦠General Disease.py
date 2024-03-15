@@ -440,6 +440,7 @@ patientsymp = (
     + circulatoryselect
     + otherselect
 )
+st.write(patientsymp)
 finalstr = ""
 for i in range(len(patientsymp)):
     if i != len(patientsymp) - 1:

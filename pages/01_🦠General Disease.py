@@ -447,6 +447,7 @@ for i in range(len(patientsymp)):
         finalstr += patientsymp[i] + ","
     else:
         finalstr += patientsymp[i]
+st.write(finalstr)
 if st.button("Predict"):
     st.write(
         """<h1 style="text-align:center">Your condition is most likely:</h1>
